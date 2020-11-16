@@ -1,0 +1,11 @@
+Source: hamonikr-printer-drivers
+Section: utils
+Priority: optional
+Maintainer: HamoniKR <pkg@hamonikr.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 4.0.0
+
+Package: hamonikr-printer-drivers
+Architecture: all
+Homepage: https://hamonikr.org
+Description: HamoniKR Support Add Printer

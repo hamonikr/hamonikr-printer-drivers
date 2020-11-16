@@ -1,0 +1,2625 @@
+*PPD-Adobe: "4.3"
+*% =========================================
+*% Copyright SEIKO EPSON CORPORATION 2016.
+*% All Rights Reserved. 
+*% =========================================
+*% PPD for EPSON AL-M320DN PS3
+*% Nov 22, 2016
+*% =========================================
+
+*FormatVersion: "4.3"
+*FileVersion: "1.12"
+*LanguageEncoding: ISOLatin1
+*LanguageVersion: English
+*PCFileName: "EPALM320DN.PPD"
+*PSVersion: "(3017.104) 0"
+*Product: "(AL-M320DN Series)"
+*Product: "(EPSON AL-M320DN Series)"
+*ModelName: "EPSON AL-M320DN Series PS3"
+*ShortNickName: "EPSON AL-M320DN Series PS3"
+*NickName: "EPSON AL-M320DN Series PS3 v3017.104"
+*Manufacturer: "Epson"
+*cupsLanguages: "fr es it de pt nl"
+
+*%***** Notes on order dependency *****
+*% 20 Input Tray Selection
+*% 30 Image protect - used in conjunction with 50, Rendering Color
+*% and depth, to validate page size vs. available frame buffer memory
+*% 55 Color Quality - must follow 50 since color quality is only effective
+*% when color mode is color
+*% 70 Selectable Separations - Overrides color model specified in (50) so
+*% it must follow it in the file
+*% 100 Page Size - must be set after 30, 50, and 60 since these determine
+*% the frame buffer memory size and thus, the allowable page sizes.
+
+
+*UIConstraints: *EPTrayUnit None *InputSlot LC2
+*UIConstraints: *EPTrayUnit None *InputSlot LC3
+*UIConstraints: *EPTrayUnit 1Tray *InputSlot LC3
+*UIConstraints: *InputSlot LC1 *PageSize EnvMonarch
+*UIConstraints: *InputSlot LC1 *PageSize Env10
+*UIConstraints: *InputSlot LC1 *PageSize EnvDL
+*UIConstraints: *InputSlot LC1 *PageSize EnvC5
+*UIConstraints: *InputSlot LC1 *PageSize EnvC6
+*UIConstraints: *InputSlot LC1 *PageSize EnvISOB5
+*UIConstraints: *InputSlot LC2 *PageSize EnvMonarch
+*UIConstraints: *InputSlot LC2 *PageSize Env10
+*UIConstraints: *InputSlot LC2 *PageSize EnvDL
+*UIConstraints: *InputSlot LC2 *PageSize EnvC5
+*UIConstraints: *InputSlot LC2 *PageSize EnvC6
+*UIConstraints: *InputSlot LC2 *PageSize EnvISOB5
+*UIConstraints: *InputSlot LC3 *PageSize EnvMonarch
+*UIConstraints: *InputSlot LC3 *PageSize Env10
+*UIConstraints: *InputSlot LC3 *PageSize EnvDL
+*UIConstraints: *InputSlot LC3 *PageSize EnvC5
+*UIConstraints: *InputSlot LC3 *PageSize EnvC6
+*UIConstraints: *InputSlot LC3 *PageSize EnvISOB5
+*UIConstraints: *Duplex DuplexTumble *PageSize A6
+*UIConstraints: *Duplex DuplexNoTumble *PageSize A6
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvMonarch
+*UIConstraints: *Duplex DuplexTumble *PageSize Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageSize Env10
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvDL
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvC5
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvC6
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvC6
+*UIConstraints: *Duplex DuplexTumble *PageSize EnvISOB5
+*UIConstraints: *Duplex DuplexNoTumble *PageSize EnvISOB5
+*UIConstraints: *InputSlot LC1 *PageRegion EnvMonarch
+*UIConstraints: *InputSlot LC1 *PageRegion Env10
+*UIConstraints: *InputSlot LC1 *PageRegion EnvDL
+*UIConstraints: *InputSlot LC1 *PageRegion EnvC5
+*UIConstraints: *InputSlot LC1 *PageRegion EnvC6
+*UIConstraints: *InputSlot LC1 *PageRegion EnvISOB5
+*UIConstraints: *InputSlot LC2 *PageRegion EnvMonarch
+*UIConstraints: *InputSlot LC2 *PageRegion Env10
+*UIConstraints: *InputSlot LC2 *PageRegion EnvDL
+*UIConstraints: *InputSlot LC2 *PageRegion EnvC5
+*UIConstraints: *InputSlot LC2 *PageRegion EnvC6
+*UIConstraints: *InputSlot LC2 *PageRegion EnvISOB5
+*UIConstraints: *InputSlot LC3 *PageRegion EnvMonarch
+*UIConstraints: *InputSlot LC3 *PageRegion Env10
+*UIConstraints: *InputSlot LC3 *PageRegion EnvDL
+*UIConstraints: *InputSlot LC3 *PageRegion EnvC5
+*UIConstraints: *InputSlot LC3 *PageRegion EnvC6
+*UIConstraints: *InputSlot LC3 *PageRegion EnvISOB5
+*UIConstraints: *Duplex DuplexTumble *PageRegion A6
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion A6
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvMonarch
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvMonarch
+*UIConstraints: *Duplex DuplexTumble *PageRegion Env10
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion Env10
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvDL
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvDL
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvC5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvC5
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvC6
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvC6
+*UIConstraints: *Duplex DuplexTumble *PageRegion EnvISOB5
+*UIConstraints: *Duplex DuplexNoTumble *PageRegion EnvISOB5
+*UIConstraints: *InputSlot LC1 *MediaType Labels
+*UIConstraints: *InputSlot LC1 *MediaType Transparency
+*UIConstraints: *InputSlot LC1 *MediaType Super_Thick
+*UIConstraints: *InputSlot LC1 *MediaType Super_Thick_Back
+*UIConstraints: *InputSlot LC1 *MediaType Envelope
+*UIConstraints: *InputSlot LC2 *MediaType Labels
+*UIConstraints: *InputSlot LC2 *MediaType Transparency
+*UIConstraints: *InputSlot LC2 *MediaType Super_Thick
+*UIConstraints: *InputSlot LC2 *MediaType Super_Thick_Back
+*UIConstraints: *InputSlot LC2 *MediaType Envelope
+*UIConstraints: *InputSlot LC3 *MediaType Labels
+*UIConstraints: *InputSlot LC3 *MediaType Transparency
+*UIConstraints: *InputSlot LC3 *MediaType Super_Thick
+*UIConstraints: *InputSlot LC3 *MediaType Super_Thick_Back
+*UIConstraints: *InputSlot LC3 *MediaType Envelope
+*UIConstraints: *Duplex DuplexTumble *MediaType Plain_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Plain_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Semi_Thick_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Semi_Thick_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Preprinted_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Preprinted_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Letterhead_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Letterhead_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Recycled_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Recycled_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Color_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Color_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Labels
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Labels
+*UIConstraints: *Duplex DuplexTumble *MediaType Transparency
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Transparency
+*UIConstraints: *Duplex DuplexTumble *MediaType Thick_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Thick_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Extra_Thick_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Extra_Thick_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Super_Thick
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Super_Thick
+*UIConstraints: *Duplex DuplexTumble *MediaType Super_Thick_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Super_Thick_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Thin_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Thin_Back
+*UIConstraints: *Duplex DuplexTumble *MediaType Envelope
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Envelope
+*UIConstraints: *Duplex DuplexTumble *MediaType Special_Back
+*UIConstraints: *Duplex DuplexNoTumble *MediaType Special_Back
+*UIConstraints: *MediaType Plain *PageSize EnvMonarch
+*UIConstraints: *MediaType Plain *PageSize Env10
+*UIConstraints: *MediaType Plain *PageSize EnvDL
+*UIConstraints: *MediaType Plain *PageSize EnvC5
+*UIConstraints: *MediaType Plain *PageSize EnvC6
+*UIConstraints: *MediaType Plain *PageSize EnvISOB5
+*UIConstraints: *MediaType Plain_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Plain_Back *PageSize Env10
+*UIConstraints: *MediaType Plain_Back *PageSize EnvDL
+*UIConstraints: *MediaType Plain_Back *PageSize EnvC5
+*UIConstraints: *MediaType Plain_Back *PageSize EnvC6
+*UIConstraints: *MediaType Plain_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Semi_Thick *PageSize EnvMonarch
+*UIConstraints: *MediaType Semi_Thick *PageSize Env10
+*UIConstraints: *MediaType Semi_Thick *PageSize EnvDL
+*UIConstraints: *MediaType Semi_Thick *PageSize EnvC5
+*UIConstraints: *MediaType Semi_Thick *PageSize EnvC6
+*UIConstraints: *MediaType Semi_Thick *PageSize EnvISOB5
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize Env10
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize EnvDL
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize EnvC5
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize EnvC6
+*UIConstraints: *MediaType Semi_Thick_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Preprinted *PageSize EnvMonarch
+*UIConstraints: *MediaType Preprinted *PageSize Env10
+*UIConstraints: *MediaType Preprinted *PageSize EnvDL
+*UIConstraints: *MediaType Preprinted *PageSize EnvC5
+*UIConstraints: *MediaType Preprinted *PageSize EnvC6
+*UIConstraints: *MediaType Preprinted *PageSize EnvISOB5
+*UIConstraints: *MediaType Preprinted_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Preprinted_Back *PageSize Env10
+*UIConstraints: *MediaType Preprinted_Back *PageSize EnvDL
+*UIConstraints: *MediaType Preprinted_Back *PageSize EnvC5
+*UIConstraints: *MediaType Preprinted_Back *PageSize EnvC6
+*UIConstraints: *MediaType Preprinted_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Letterhead *PageSize EnvMonarch
+*UIConstraints: *MediaType Letterhead *PageSize Env10
+*UIConstraints: *MediaType Letterhead *PageSize EnvDL
+*UIConstraints: *MediaType Letterhead *PageSize EnvC5
+*UIConstraints: *MediaType Letterhead *PageSize EnvC6
+*UIConstraints: *MediaType Letterhead *PageSize EnvISOB5
+*UIConstraints: *MediaType Letterhead_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Letterhead_Back *PageSize Env10
+*UIConstraints: *MediaType Letterhead_Back *PageSize EnvDL
+*UIConstraints: *MediaType Letterhead_Back *PageSize EnvC5
+*UIConstraints: *MediaType Letterhead_Back *PageSize EnvC6
+*UIConstraints: *MediaType Letterhead_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Recycled *PageSize EnvMonarch
+*UIConstraints: *MediaType Recycled *PageSize Env10
+*UIConstraints: *MediaType Recycled *PageSize EnvDL
+*UIConstraints: *MediaType Recycled *PageSize EnvC5
+*UIConstraints: *MediaType Recycled *PageSize EnvC6
+*UIConstraints: *MediaType Recycled *PageSize EnvISOB5
+*UIConstraints: *MediaType Recycled_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Recycled_Back *PageSize Env10
+*UIConstraints: *MediaType Recycled_Back *PageSize EnvDL
+*UIConstraints: *MediaType Recycled_Back *PageSize EnvC5
+*UIConstraints: *MediaType Recycled_Back *PageSize EnvC6
+*UIConstraints: *MediaType Recycled_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Color *PageSize EnvMonarch
+*UIConstraints: *MediaType Color *PageSize Env10
+*UIConstraints: *MediaType Color *PageSize EnvDL
+*UIConstraints: *MediaType Color *PageSize EnvC5
+*UIConstraints: *MediaType Color *PageSize EnvC6
+*UIConstraints: *MediaType Color *PageSize EnvISOB5
+*UIConstraints: *MediaType Color_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Color_Back *PageSize Env10
+*UIConstraints: *MediaType Color_Back *PageSize EnvDL
+*UIConstraints: *MediaType Color_Back *PageSize EnvC5
+*UIConstraints: *MediaType Color_Back *PageSize EnvC6
+*UIConstraints: *MediaType Color_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Labels *PageSize EnvMonarch
+*UIConstraints: *MediaType Labels *PageSize Env10
+*UIConstraints: *MediaType Labels *PageSize EnvDL
+*UIConstraints: *MediaType Labels *PageSize EnvC5
+*UIConstraints: *MediaType Labels *PageSize EnvC6
+*UIConstraints: *MediaType Labels *PageSize EnvISOB5
+*UIConstraints: *MediaType Transparency *PageSize EnvMonarch
+*UIConstraints: *MediaType Transparency *PageSize Env10
+*UIConstraints: *MediaType Transparency *PageSize EnvDL
+*UIConstraints: *MediaType Transparency *PageSize EnvC5
+*UIConstraints: *MediaType Transparency *PageSize EnvC6
+*UIConstraints: *MediaType Transparency *PageSize EnvISOB5
+*UIConstraints: *MediaType Thick *PageSize EnvMonarch
+*UIConstraints: *MediaType Thick *PageSize Env10
+*UIConstraints: *MediaType Thick *PageSize EnvDL
+*UIConstraints: *MediaType Thick *PageSize EnvC5
+*UIConstraints: *MediaType Thick *PageSize EnvC6
+*UIConstraints: *MediaType Thick *PageSize EnvISOB5
+*UIConstraints: *MediaType Thick_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Thick_Back *PageSize Env10
+*UIConstraints: *MediaType Thick_Back *PageSize EnvDL
+*UIConstraints: *MediaType Thick_Back *PageSize EnvC5
+*UIConstraints: *MediaType Thick_Back *PageSize EnvC6
+*UIConstraints: *MediaType Thick_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Extra_Thick *PageSize EnvMonarch
+*UIConstraints: *MediaType Extra_Thick *PageSize Env10
+*UIConstraints: *MediaType Extra_Thick *PageSize EnvDL
+*UIConstraints: *MediaType Extra_Thick *PageSize EnvC5
+*UIConstraints: *MediaType Extra_Thick *PageSize EnvC6
+*UIConstraints: *MediaType Extra_Thick *PageSize EnvISOB5
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize Env10
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize EnvDL
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize EnvC5
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize EnvC6
+*UIConstraints: *MediaType Extra_Thick_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Super_Thick *PageSize EnvMonarch
+*UIConstraints: *MediaType Super_Thick *PageSize Env10
+*UIConstraints: *MediaType Super_Thick *PageSize EnvDL
+*UIConstraints: *MediaType Super_Thick *PageSize EnvC5
+*UIConstraints: *MediaType Super_Thick *PageSize EnvC6
+*UIConstraints: *MediaType Super_Thick *PageSize EnvISOB5
+*UIConstraints: *MediaType Super_Thick_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Super_Thick_Back *PageSize Env10
+*UIConstraints: *MediaType Super_Thick_Back *PageSize EnvDL
+*UIConstraints: *MediaType Super_Thick_Back *PageSize EnvC5
+*UIConstraints: *MediaType Super_Thick_Back *PageSize EnvC6
+*UIConstraints: *MediaType Super_Thick_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Thin *PageSize EnvMonarch
+*UIConstraints: *MediaType Thin *PageSize Env10
+*UIConstraints: *MediaType Thin *PageSize EnvDL
+*UIConstraints: *MediaType Thin *PageSize EnvC5
+*UIConstraints: *MediaType Thin *PageSize EnvC6
+*UIConstraints: *MediaType Thin *PageSize EnvISOB5
+*UIConstraints: *MediaType Thin_Back *PageSize EnvMonarch
+*UIConstraints: *MediaType Thin_Back *PageSize Env10
+*UIConstraints: *MediaType Thin_Back *PageSize EnvDL
+*UIConstraints: *MediaType Thin_Back *PageSize EnvC5
+*UIConstraints: *MediaType Thin_Back *PageSize EnvC6
+*UIConstraints: *MediaType Thin_Back *PageSize EnvISOB5
+*UIConstraints: *MediaType Plain *PageRegion EnvMonarch
+*UIConstraints: *MediaType Plain *PageRegion Env10
+*UIConstraints: *MediaType Plain *PageRegion EnvDL
+*UIConstraints: *MediaType Plain *PageRegion EnvC5
+*UIConstraints: *MediaType Plain *PageRegion EnvC6
+*UIConstraints: *MediaType Plain *PageRegion EnvISOB5
+*UIConstraints: *MediaType Plain_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Plain_Back *PageRegion Env10
+*UIConstraints: *MediaType Plain_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Plain_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Plain_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Plain_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Semi_Thick *PageRegion EnvMonarch
+*UIConstraints: *MediaType Semi_Thick *PageRegion Env10
+*UIConstraints: *MediaType Semi_Thick *PageRegion EnvDL
+*UIConstraints: *MediaType Semi_Thick *PageRegion EnvC5
+*UIConstraints: *MediaType Semi_Thick *PageRegion EnvC6
+*UIConstraints: *MediaType Semi_Thick *PageRegion EnvISOB5
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion Env10
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Semi_Thick_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Preprinted *PageRegion EnvMonarch
+*UIConstraints: *MediaType Preprinted *PageRegion Env10
+*UIConstraints: *MediaType Preprinted *PageRegion EnvDL
+*UIConstraints: *MediaType Preprinted *PageRegion EnvC5
+*UIConstraints: *MediaType Preprinted *PageRegion EnvC6
+*UIConstraints: *MediaType Preprinted *PageRegion EnvISOB5
+*UIConstraints: *MediaType Preprinted_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Preprinted_Back *PageRegion Env10
+*UIConstraints: *MediaType Preprinted_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Preprinted_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Preprinted_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Preprinted_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Letterhead *PageRegion EnvMonarch
+*UIConstraints: *MediaType Letterhead *PageRegion Env10
+*UIConstraints: *MediaType Letterhead *PageRegion EnvDL
+*UIConstraints: *MediaType Letterhead *PageRegion EnvC5
+*UIConstraints: *MediaType Letterhead *PageRegion EnvC6
+*UIConstraints: *MediaType Letterhead *PageRegion EnvISOB5
+*UIConstraints: *MediaType Letterhead_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Letterhead_Back *PageRegion Env10
+*UIConstraints: *MediaType Letterhead_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Letterhead_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Letterhead_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Letterhead_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Recycled *PageRegion EnvMonarch
+*UIConstraints: *MediaType Recycled *PageRegion Env10
+*UIConstraints: *MediaType Recycled *PageRegion EnvDL
+*UIConstraints: *MediaType Recycled *PageRegion EnvC5
+*UIConstraints: *MediaType Recycled *PageRegion EnvC6
+*UIConstraints: *MediaType Recycled *PageRegion EnvISOB5
+*UIConstraints: *MediaType Recycled_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Recycled_Back *PageRegion Env10
+*UIConstraints: *MediaType Recycled_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Recycled_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Recycled_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Recycled_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Color *PageRegion EnvMonarch
+*UIConstraints: *MediaType Color *PageRegion Env10
+*UIConstraints: *MediaType Color *PageRegion EnvDL
+*UIConstraints: *MediaType Color *PageRegion EnvC5
+*UIConstraints: *MediaType Color *PageRegion EnvC6
+*UIConstraints: *MediaType Color *PageRegion EnvISOB5
+*UIConstraints: *MediaType Color_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Color_Back *PageRegion Env10
+*UIConstraints: *MediaType Color_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Color_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Color_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Color_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Labels *PageRegion EnvMonarch
+*UIConstraints: *MediaType Labels *PageRegion Env10
+*UIConstraints: *MediaType Labels *PageRegion EnvDL
+*UIConstraints: *MediaType Labels *PageRegion EnvC5
+*UIConstraints: *MediaType Labels *PageRegion EnvC6
+*UIConstraints: *MediaType Labels *PageRegion EnvISOB5
+*UIConstraints: *MediaType Transparency *PageRegion EnvMonarch
+*UIConstraints: *MediaType Transparency *PageRegion Env10
+*UIConstraints: *MediaType Transparency *PageRegion EnvDL
+*UIConstraints: *MediaType Transparency *PageRegion EnvC5
+*UIConstraints: *MediaType Transparency *PageRegion EnvC6
+*UIConstraints: *MediaType Transparency *PageRegion EnvISOB5
+*UIConstraints: *MediaType Thick *PageRegion EnvMonarch
+*UIConstraints: *MediaType Thick *PageRegion Env10
+*UIConstraints: *MediaType Thick *PageRegion EnvDL
+*UIConstraints: *MediaType Thick *PageRegion EnvC5
+*UIConstraints: *MediaType Thick *PageRegion EnvC6
+*UIConstraints: *MediaType Thick *PageRegion EnvISOB5
+*UIConstraints: *MediaType Thick_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Thick_Back *PageRegion Env10
+*UIConstraints: *MediaType Thick_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Thick_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Thick_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Thick_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Extra_Thick *PageRegion EnvMonarch
+*UIConstraints: *MediaType Extra_Thick *PageRegion Env10
+*UIConstraints: *MediaType Extra_Thick *PageRegion EnvDL
+*UIConstraints: *MediaType Extra_Thick *PageRegion EnvC5
+*UIConstraints: *MediaType Extra_Thick *PageRegion EnvC6
+*UIConstraints: *MediaType Extra_Thick *PageRegion EnvISOB5
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion Env10
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Extra_Thick_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Super_Thick *PageRegion EnvMonarch
+*UIConstraints: *MediaType Super_Thick *PageRegion Env10
+*UIConstraints: *MediaType Super_Thick *PageRegion EnvDL
+*UIConstraints: *MediaType Super_Thick *PageRegion EnvC5
+*UIConstraints: *MediaType Super_Thick *PageRegion EnvC6
+*UIConstraints: *MediaType Super_Thick *PageRegion EnvISOB5
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion Env10
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Super_Thick_Back *PageRegion EnvISOB5
+*UIConstraints: *MediaType Thin *PageRegion EnvMonarch
+*UIConstraints: *MediaType Thin *PageRegion Env10
+*UIConstraints: *MediaType Thin *PageRegion EnvDL
+*UIConstraints: *MediaType Thin *PageRegion EnvC5
+*UIConstraints: *MediaType Thin *PageRegion EnvC6
+*UIConstraints: *MediaType Thin *PageRegion EnvISOB5
+*UIConstraints: *MediaType Thin_Back *PageRegion EnvMonarch
+*UIConstraints: *MediaType Thin_Back *PageRegion Env10
+*UIConstraints: *MediaType Thin_Back *PageRegion EnvDL
+*UIConstraints: *MediaType Thin_Back *PageRegion EnvC5
+*UIConstraints: *MediaType Thin_Back *PageRegion EnvC6
+*UIConstraints: *MediaType Thin_Back *PageRegion EnvISOB5
+*UIConstraints: *PageSize A4 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize A6 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize B5.Transverse *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Letter *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Statement *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Legal *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize GLT *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize FanFoldGermanLegal *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Executive *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Folio *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize EnvMonarch *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize Env10 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize EnvDL *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize EnvC5 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize EnvC6 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize EnvISOB5 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageSize A4 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize A6 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize B5.Transverse *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Letter *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Statement *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Legal *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize GLT *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize FanFoldGermanLegal *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Executive *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Folio *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize EnvMonarch *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize Env10 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize EnvDL *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize EnvC5 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize EnvC6 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageSize EnvISOB5 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion A4 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion A6 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion B5.Transverse *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Letter *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Statement *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Legal *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion GLT *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion FanFoldGermanLegal *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Executive *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Folio *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion EnvMonarch *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion Env10 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion EnvDL *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion EnvC5 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion EnvC6 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion EnvISOB5 *EPRotate90Degrees Rotate0
+*UIConstraints: *PageRegion A4 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion A6 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion B5.Transverse *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Letter *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Statement *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Legal *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion GLT *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion FanFoldGermanLegal *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Executive *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Folio *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion EnvMonarch *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion Env10 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion EnvDL *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion EnvC5 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion EnvC6 *EPRotate90Degrees Rotate90
+*UIConstraints: *PageRegion EnvISOB5 *EPRotate90Degrees Rotate90
+*% ======= Reversed UI =========
+*UIConstraints: *InputSlot LC2 *EPTrayUnit None
+*UIConstraints: *InputSlot LC3 *EPTrayUnit None
+*UIConstraints: *InputSlot LC3 *EPTrayUnit 1Tray
+*UIConstraints: *PageSize EnvMonarch *InputSlot LC1
+*UIConstraints: *PageSize Env10 *InputSlot LC1
+*UIConstraints: *PageSize EnvDL *InputSlot LC1
+*UIConstraints: *PageSize EnvC5 *InputSlot LC1
+*UIConstraints: *PageSize EnvC6 *InputSlot LC1
+*UIConstraints: *PageSize EnvISOB5 *InputSlot LC1
+*UIConstraints: *PageSize EnvMonarch *InputSlot LC2
+*UIConstraints: *PageSize Env10 *InputSlot LC2
+*UIConstraints: *PageSize EnvDL *InputSlot LC2
+*UIConstraints: *PageSize EnvC5 *InputSlot LC2
+*UIConstraints: *PageSize EnvC6 *InputSlot LC2
+*UIConstraints: *PageSize EnvISOB5 *InputSlot LC2
+*UIConstraints: *PageSize EnvMonarch *InputSlot LC3
+*UIConstraints: *PageSize Env10 *InputSlot LC3
+*UIConstraints: *PageSize EnvDL *InputSlot LC3
+*UIConstraints: *PageSize EnvC5 *InputSlot LC3
+*UIConstraints: *PageSize EnvC6 *InputSlot LC3
+*UIConstraints: *PageSize EnvISOB5 *InputSlot LC3
+*UIConstraints: *PageSize A6 *Duplex DuplexTumble
+*UIConstraints: *PageSize A6 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *PageSize Env10 *Duplex DuplexTumble
+*UIConstraints: *PageSize Env10 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvC5 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC5 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvC6 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvC6 *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvISOB5 *Duplex DuplexTumble
+*UIConstraints: *PageSize EnvISOB5 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvMonarch *InputSlot LC1
+*UIConstraints: *PageRegion Env10 *InputSlot LC1
+*UIConstraints: *PageRegion EnvDL *InputSlot LC1
+*UIConstraints: *PageRegion EnvC5 *InputSlot LC1
+*UIConstraints: *PageRegion EnvC6 *InputSlot LC1
+*UIConstraints: *PageRegion EnvISOB5 *InputSlot LC1
+*UIConstraints: *PageRegion EnvMonarch *InputSlot LC2
+*UIConstraints: *PageRegion Env10 *InputSlot LC2
+*UIConstraints: *PageRegion EnvDL *InputSlot LC2
+*UIConstraints: *PageRegion EnvC5 *InputSlot LC2
+*UIConstraints: *PageRegion EnvC6 *InputSlot LC2
+*UIConstraints: *PageRegion EnvISOB5 *InputSlot LC2
+*UIConstraints: *PageRegion EnvMonarch *InputSlot LC3
+*UIConstraints: *PageRegion Env10 *InputSlot LC3
+*UIConstraints: *PageRegion EnvDL *InputSlot LC3
+*UIConstraints: *PageRegion EnvC5 *InputSlot LC3
+*UIConstraints: *PageRegion EnvC6 *InputSlot LC3
+*UIConstraints: *PageRegion EnvISOB5 *InputSlot LC3
+*UIConstraints: *PageRegion A6 *Duplex DuplexTumble
+*UIConstraints: *PageRegion A6 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvMonarch *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion Env10 *Duplex DuplexTumble
+*UIConstraints: *PageRegion Env10 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvDL *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvC5 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC5 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvC6 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvC6 *Duplex DuplexNoTumble
+*UIConstraints: *PageRegion EnvISOB5 *Duplex DuplexTumble
+*UIConstraints: *PageRegion EnvISOB5 *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Labels *InputSlot LC1
+*UIConstraints: *MediaType Transparency *InputSlot LC1
+*UIConstraints: *MediaType Super_Thick *InputSlot LC1
+*UIConstraints: *MediaType Super_Thick_Back *InputSlot LC1
+*UIConstraints: *MediaType Envelope *InputSlot LC1
+*UIConstraints: *MediaType Labels *InputSlot LC2
+*UIConstraints: *MediaType Transparency *InputSlot LC2
+*UIConstraints: *MediaType Super_Thick *InputSlot LC2
+*UIConstraints: *MediaType Super_Thick_Back *InputSlot LC2
+*UIConstraints: *MediaType Envelope *InputSlot LC2
+*UIConstraints: *MediaType Labels *InputSlot LC3
+*UIConstraints: *MediaType Transparency *InputSlot LC3
+*UIConstraints: *MediaType Super_Thick *InputSlot LC3
+*UIConstraints: *MediaType Super_Thick_Back *InputSlot LC3
+*UIConstraints: *MediaType Envelope *InputSlot LC3
+*UIConstraints: *MediaType Plain_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Plain_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Semi_Thick_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Semi_Thick_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Preprinted_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Preprinted_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Letterhead_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Letterhead_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Recycled_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Recycled_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Color_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Color_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Labels *Duplex DuplexTumble
+*UIConstraints: *MediaType Labels *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Transparency *Duplex DuplexTumble
+*UIConstraints: *MediaType Transparency *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Thick_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Thick_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Extra_Thick_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Extra_Thick_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Super_Thick *Duplex DuplexTumble
+*UIConstraints: *MediaType Super_Thick *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Super_Thick_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Super_Thick_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Thin_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Thin_Back *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Envelope *Duplex DuplexTumble
+*UIConstraints: *MediaType Envelope *Duplex DuplexNoTumble
+*UIConstraints: *MediaType Special_Back *Duplex DuplexTumble
+*UIConstraints: *MediaType Special_Back *Duplex DuplexNoTumble
+*UIConstraints: *PageSize EnvMonarch *MediaType Plain
+*UIConstraints: *PageSize Env10 *MediaType Plain
+*UIConstraints: *PageSize EnvDL *MediaType Plain
+*UIConstraints: *PageSize EnvC5 *MediaType Plain
+*UIConstraints: *PageSize EnvC6 *MediaType Plain
+*UIConstraints: *PageSize EnvISOB5 *MediaType Plain
+*UIConstraints: *PageSize EnvMonarch *MediaType Plain_Back
+*UIConstraints: *PageSize Env10 *MediaType Plain_Back
+*UIConstraints: *PageSize EnvDL *MediaType Plain_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Plain_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Plain_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Plain_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Semi_Thick
+*UIConstraints: *PageSize Env10 *MediaType Semi_Thick
+*UIConstraints: *PageSize EnvDL *MediaType Semi_Thick
+*UIConstraints: *PageSize EnvC5 *MediaType Semi_Thick
+*UIConstraints: *PageSize EnvC6 *MediaType Semi_Thick
+*UIConstraints: *PageSize EnvISOB5 *MediaType Semi_Thick
+*UIConstraints: *PageSize EnvMonarch *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize Env10 *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize EnvDL *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Semi_Thick_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Preprinted
+*UIConstraints: *PageSize Env10 *MediaType Preprinted
+*UIConstraints: *PageSize EnvDL *MediaType Preprinted
+*UIConstraints: *PageSize EnvC5 *MediaType Preprinted
+*UIConstraints: *PageSize EnvC6 *MediaType Preprinted
+*UIConstraints: *PageSize EnvISOB5 *MediaType Preprinted
+*UIConstraints: *PageSize EnvMonarch *MediaType Preprinted_Back
+*UIConstraints: *PageSize Env10 *MediaType Preprinted_Back
+*UIConstraints: *PageSize EnvDL *MediaType Preprinted_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Preprinted_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Preprinted_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Preprinted_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Letterhead
+*UIConstraints: *PageSize Env10 *MediaType Letterhead
+*UIConstraints: *PageSize EnvDL *MediaType Letterhead
+*UIConstraints: *PageSize EnvC5 *MediaType Letterhead
+*UIConstraints: *PageSize EnvC6 *MediaType Letterhead
+*UIConstraints: *PageSize EnvISOB5 *MediaType Letterhead
+*UIConstraints: *PageSize EnvMonarch *MediaType Letterhead_Back
+*UIConstraints: *PageSize Env10 *MediaType Letterhead_Back
+*UIConstraints: *PageSize EnvDL *MediaType Letterhead_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Letterhead_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Letterhead_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Letterhead_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Recycled
+*UIConstraints: *PageSize Env10 *MediaType Recycled
+*UIConstraints: *PageSize EnvDL *MediaType Recycled
+*UIConstraints: *PageSize EnvC5 *MediaType Recycled
+*UIConstraints: *PageSize EnvC6 *MediaType Recycled
+*UIConstraints: *PageSize EnvISOB5 *MediaType Recycled
+*UIConstraints: *PageSize EnvMonarch *MediaType Recycled_Back
+*UIConstraints: *PageSize Env10 *MediaType Recycled_Back
+*UIConstraints: *PageSize EnvDL *MediaType Recycled_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Recycled_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Recycled_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Recycled_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Color
+*UIConstraints: *PageSize Env10 *MediaType Color
+*UIConstraints: *PageSize EnvDL *MediaType Color
+*UIConstraints: *PageSize EnvC5 *MediaType Color
+*UIConstraints: *PageSize EnvC6 *MediaType Color
+*UIConstraints: *PageSize EnvISOB5 *MediaType Color
+*UIConstraints: *PageSize EnvMonarch *MediaType Color_Back
+*UIConstraints: *PageSize Env10 *MediaType Color_Back
+*UIConstraints: *PageSize EnvDL *MediaType Color_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Color_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Color_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Color_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Labels
+*UIConstraints: *PageSize Env10 *MediaType Labels
+*UIConstraints: *PageSize EnvDL *MediaType Labels
+*UIConstraints: *PageSize EnvC5 *MediaType Labels
+*UIConstraints: *PageSize EnvC6 *MediaType Labels
+*UIConstraints: *PageSize EnvISOB5 *MediaType Labels
+*UIConstraints: *PageSize EnvMonarch *MediaType Transparency
+*UIConstraints: *PageSize Env10 *MediaType Transparency
+*UIConstraints: *PageSize EnvDL *MediaType Transparency
+*UIConstraints: *PageSize EnvC5 *MediaType Transparency
+*UIConstraints: *PageSize EnvC6 *MediaType Transparency
+*UIConstraints: *PageSize EnvISOB5 *MediaType Transparency
+*UIConstraints: *PageSize EnvMonarch *MediaType Thick
+*UIConstraints: *PageSize Env10 *MediaType Thick
+*UIConstraints: *PageSize EnvDL *MediaType Thick
+*UIConstraints: *PageSize EnvC5 *MediaType Thick
+*UIConstraints: *PageSize EnvC6 *MediaType Thick
+*UIConstraints: *PageSize EnvISOB5 *MediaType Thick
+*UIConstraints: *PageSize EnvMonarch *MediaType Thick_Back
+*UIConstraints: *PageSize Env10 *MediaType Thick_Back
+*UIConstraints: *PageSize EnvDL *MediaType Thick_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Thick_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Thick_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Thick_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Extra_Thick
+*UIConstraints: *PageSize Env10 *MediaType Extra_Thick
+*UIConstraints: *PageSize EnvDL *MediaType Extra_Thick
+*UIConstraints: *PageSize EnvC5 *MediaType Extra_Thick
+*UIConstraints: *PageSize EnvC6 *MediaType Extra_Thick
+*UIConstraints: *PageSize EnvISOB5 *MediaType Extra_Thick
+*UIConstraints: *PageSize EnvMonarch *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize Env10 *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize EnvDL *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Extra_Thick_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Super_Thick
+*UIConstraints: *PageSize Env10 *MediaType Super_Thick
+*UIConstraints: *PageSize EnvDL *MediaType Super_Thick
+*UIConstraints: *PageSize EnvC5 *MediaType Super_Thick
+*UIConstraints: *PageSize EnvC6 *MediaType Super_Thick
+*UIConstraints: *PageSize EnvISOB5 *MediaType Super_Thick
+*UIConstraints: *PageSize EnvMonarch *MediaType Super_Thick_Back
+*UIConstraints: *PageSize Env10 *MediaType Super_Thick_Back
+*UIConstraints: *PageSize EnvDL *MediaType Super_Thick_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Super_Thick_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Super_Thick_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Super_Thick_Back
+*UIConstraints: *PageSize EnvMonarch *MediaType Thin
+*UIConstraints: *PageSize Env10 *MediaType Thin
+*UIConstraints: *PageSize EnvDL *MediaType Thin
+*UIConstraints: *PageSize EnvC5 *MediaType Thin
+*UIConstraints: *PageSize EnvC6 *MediaType Thin
+*UIConstraints: *PageSize EnvISOB5 *MediaType Thin
+*UIConstraints: *PageSize EnvMonarch *MediaType Thin_Back
+*UIConstraints: *PageSize Env10 *MediaType Thin_Back
+*UIConstraints: *PageSize EnvDL *MediaType Thin_Back
+*UIConstraints: *PageSize EnvC5 *MediaType Thin_Back
+*UIConstraints: *PageSize EnvC6 *MediaType Thin_Back
+*UIConstraints: *PageSize EnvISOB5 *MediaType Thin_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Plain
+*UIConstraints: *PageRegion Env10 *MediaType Plain
+*UIConstraints: *PageRegion EnvDL *MediaType Plain
+*UIConstraints: *PageRegion EnvC5 *MediaType Plain
+*UIConstraints: *PageRegion EnvC6 *MediaType Plain
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Plain
+*UIConstraints: *PageRegion EnvMonarch *MediaType Plain_Back
+*UIConstraints: *PageRegion Env10 *MediaType Plain_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Plain_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Plain_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Plain_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Plain_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Semi_Thick
+*UIConstraints: *PageRegion Env10 *MediaType Semi_Thick
+*UIConstraints: *PageRegion EnvDL *MediaType Semi_Thick
+*UIConstraints: *PageRegion EnvC5 *MediaType Semi_Thick
+*UIConstraints: *PageRegion EnvC6 *MediaType Semi_Thick
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Semi_Thick
+*UIConstraints: *PageRegion EnvMonarch *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion Env10 *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Semi_Thick_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Preprinted
+*UIConstraints: *PageRegion Env10 *MediaType Preprinted
+*UIConstraints: *PageRegion EnvDL *MediaType Preprinted
+*UIConstraints: *PageRegion EnvC5 *MediaType Preprinted
+*UIConstraints: *PageRegion EnvC6 *MediaType Preprinted
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Preprinted
+*UIConstraints: *PageRegion EnvMonarch *MediaType Preprinted_Back
+*UIConstraints: *PageRegion Env10 *MediaType Preprinted_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Preprinted_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Preprinted_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Preprinted_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Preprinted_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Letterhead
+*UIConstraints: *PageRegion Env10 *MediaType Letterhead
+*UIConstraints: *PageRegion EnvDL *MediaType Letterhead
+*UIConstraints: *PageRegion EnvC5 *MediaType Letterhead
+*UIConstraints: *PageRegion EnvC6 *MediaType Letterhead
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Letterhead
+*UIConstraints: *PageRegion EnvMonarch *MediaType Letterhead_Back
+*UIConstraints: *PageRegion Env10 *MediaType Letterhead_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Letterhead_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Letterhead_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Letterhead_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Letterhead_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Recycled
+*UIConstraints: *PageRegion Env10 *MediaType Recycled
+*UIConstraints: *PageRegion EnvDL *MediaType Recycled
+*UIConstraints: *PageRegion EnvC5 *MediaType Recycled
+*UIConstraints: *PageRegion EnvC6 *MediaType Recycled
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Recycled
+*UIConstraints: *PageRegion EnvMonarch *MediaType Recycled_Back
+*UIConstraints: *PageRegion Env10 *MediaType Recycled_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Recycled_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Recycled_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Recycled_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Recycled_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Color
+*UIConstraints: *PageRegion Env10 *MediaType Color
+*UIConstraints: *PageRegion EnvDL *MediaType Color
+*UIConstraints: *PageRegion EnvC5 *MediaType Color
+*UIConstraints: *PageRegion EnvC6 *MediaType Color
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Color
+*UIConstraints: *PageRegion EnvMonarch *MediaType Color_Back
+*UIConstraints: *PageRegion Env10 *MediaType Color_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Color_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Color_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Color_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Color_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Labels
+*UIConstraints: *PageRegion Env10 *MediaType Labels
+*UIConstraints: *PageRegion EnvDL *MediaType Labels
+*UIConstraints: *PageRegion EnvC5 *MediaType Labels
+*UIConstraints: *PageRegion EnvC6 *MediaType Labels
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Labels
+*UIConstraints: *PageRegion EnvMonarch *MediaType Transparency
+*UIConstraints: *PageRegion Env10 *MediaType Transparency
+*UIConstraints: *PageRegion EnvDL *MediaType Transparency
+*UIConstraints: *PageRegion EnvC5 *MediaType Transparency
+*UIConstraints: *PageRegion EnvC6 *MediaType Transparency
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Transparency
+*UIConstraints: *PageRegion EnvMonarch *MediaType Thick
+*UIConstraints: *PageRegion Env10 *MediaType Thick
+*UIConstraints: *PageRegion EnvDL *MediaType Thick
+*UIConstraints: *PageRegion EnvC5 *MediaType Thick
+*UIConstraints: *PageRegion EnvC6 *MediaType Thick
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Thick
+*UIConstraints: *PageRegion EnvMonarch *MediaType Thick_Back
+*UIConstraints: *PageRegion Env10 *MediaType Thick_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Thick_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Thick_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Thick_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Thick_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Extra_Thick
+*UIConstraints: *PageRegion Env10 *MediaType Extra_Thick
+*UIConstraints: *PageRegion EnvDL *MediaType Extra_Thick
+*UIConstraints: *PageRegion EnvC5 *MediaType Extra_Thick
+*UIConstraints: *PageRegion EnvC6 *MediaType Extra_Thick
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Extra_Thick
+*UIConstraints: *PageRegion EnvMonarch *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion Env10 *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Extra_Thick_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Super_Thick
+*UIConstraints: *PageRegion Env10 *MediaType Super_Thick
+*UIConstraints: *PageRegion EnvDL *MediaType Super_Thick
+*UIConstraints: *PageRegion EnvC5 *MediaType Super_Thick
+*UIConstraints: *PageRegion EnvC6 *MediaType Super_Thick
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Super_Thick
+*UIConstraints: *PageRegion EnvMonarch *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion Env10 *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Super_Thick_Back
+*UIConstraints: *PageRegion EnvMonarch *MediaType Thin
+*UIConstraints: *PageRegion Env10 *MediaType Thin
+*UIConstraints: *PageRegion EnvDL *MediaType Thin
+*UIConstraints: *PageRegion EnvC5 *MediaType Thin
+*UIConstraints: *PageRegion EnvC6 *MediaType Thin
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Thin
+*UIConstraints: *PageRegion EnvMonarch *MediaType Thin_Back
+*UIConstraints: *PageRegion Env10 *MediaType Thin_Back
+*UIConstraints: *PageRegion EnvDL *MediaType Thin_Back
+*UIConstraints: *PageRegion EnvC5 *MediaType Thin_Back
+*UIConstraints: *PageRegion EnvC6 *MediaType Thin_Back
+*UIConstraints: *PageRegion EnvISOB5 *MediaType Thin_Back
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize A4
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize A6
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize B5.Transverse
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Letter
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Statement
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Legal
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize GLT
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize FanFoldGermanLegal
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Executive
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Folio
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize EnvMonarch
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize Env10
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize EnvDL
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize EnvC5
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize EnvC6
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageSize EnvISOB5
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize A4
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize A6
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize B5.Transverse
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Letter
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Statement
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Legal
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize GLT
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize FanFoldGermanLegal
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Executive
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Folio
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize EnvMonarch
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize Env10
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize EnvDL
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize EnvC5
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize EnvC6
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageSize EnvISOB5
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion A4
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion A6
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion B5.Transverse
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Letter
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Statement
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Legal
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion GLT
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion FanFoldGermanLegal
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Executive
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Folio
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion EnvMonarch
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion Env10
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion EnvDL
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion EnvC5
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion EnvC6
+*UIConstraints: *EPRotate90Degrees Rotate0 *PageRegion EnvISOB5
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion A4
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion A6
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion B5.Transverse
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Letter
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Statement
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Legal
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion GLT
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion FanFoldGermanLegal
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Executive
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Folio
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion EnvMonarch
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion Env10
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion EnvDL
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion EnvC5
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion EnvC6
+*UIConstraints: *EPRotate90Degrees Rotate90 *PageRegion EnvISOB5
+
+
+
+*%*********** Device Capabilities ************
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*Throughput: "16"
+*1284Modes Parallel: Compat Nibble ECP
+
+
+*TTRasterizer: Type42
+*?TTRasterizer: "
+	save
+	42 /FontType resourcestatus {pop pop (Type42)}{(No Type42)}ifelse = flush
+	restore
+	"
+*End
+
+
+*Protocols: TBCP
+
+*% *Protocols: BCP TBCP PJL 
+*% *JCLBegin: "<1B>%-12345X"
+*% *JCLToPSInterpreter: "@PJL ENTER LANGUAGE = POSTSCRIPT <0A>"
+*% *JCLEnd: "<1B>%-12345X"
+
+
+*FreeVM: "737179008"
+*VMOption 256Meg: "737179008"
+*FCacheSize 256Meg: 30515200
+
+
+
+
+*%********** Installable Options **************
+
+*OpenGroup: InstallableOptions/Installable Options
+*fr.Translation InstallableOptions/Installable Options: ""
+*es.Translation InstallableOptions/Installable Options: ""
+*it.Translation InstallableOptions/Installable Options: ""
+*de.Translation InstallableOptions/Installable Options: ""
+*pt.Translation InstallableOptions/Installable Options: ""
+*nl.Translation InstallableOptions/Installable Options: ""
+
+
+
+*OpenUI *EPTrayUnit/Lower Cassette Unit: PickOne
+*fr.Translation EPTrayUnit/Casettes optionnelles: ""
+*es.Translation EPTrayUnit/Bandeja inferior: ""
+*it.Translation EPTrayUnit/Unità cassetti inferiore: ""
+*de.Translation EPTrayUnit/Unteres Zusatzpapiermagazin: ""
+*pt.Translation EPTrayUnit/Alimentador Inferior: ""
+*nl.Translation EPTrayUnit/Onderste Cassette-eenheid: ""
+
+
+*DefaultEPTrayUnit: None
+*EPTrayUnit None/None: ""
+*fr.EPTrayUnit None/Aucune: ""
+*es.EPTrayUnit None/Ninguna: ""
+*it.EPTrayUnit None/Nessuna: ""
+*de.EPTrayUnit None/Keins: ""
+*pt.EPTrayUnit None/Nenhum: ""
+*nl.EPTrayUnit None/Geen: ""
+
+*EPTrayUnit 1Tray/1 Cassette Unit: ""
+*fr.EPTrayUnit 1Tray/Unité 1 cassettes: ""
+*es.EPTrayUnit 1Tray/1 Bandeja: ""
+*it.EPTrayUnit 1Tray/Unità 1 cassetti: ""
+*de.EPTrayUnit 1Tray/Zusatzpapiermagazin mit 1 Kassetten: ""
+*pt.EPTrayUnit 1Tray/1 AAF Inf: ""
+*nl.EPTrayUnit 1Tray/1 Cassette-eenheid: ""
+
+*EPTrayUnit 2Tray/2 Cassette Unit: ""
+*fr.EPTrayUnit 2Tray/Unité 2 cassettes: ""
+*es.EPTrayUnit 2Tray/2 Bandeja: ""
+*it.EPTrayUnit 2Tray/Unità 2 cassetti: ""
+*de.EPTrayUnit 2Tray/Zusatzpapiermagazin mit 2 Kassetten: ""
+*pt.EPTrayUnit 2Tray/2 AAF Inf: ""
+*nl.EPTrayUnit 2Tray/2 Cassette-eenheid: ""
+
+
+*?EPTrayUnit: "
+	save
+        /CustomProcs /ProcSet findresource /numberofinputtrays get exec
+        dup 3 eq { pop (2Tray) }{ 2 eq { (1Tray) }{ (None) } ifelse } ifelse
+        = flush restore"
+*End
+*CloseUI: *EPTrayUnit
+
+
+*CloseGroup:  InstallableOptions
+
+
+
+*SuggestedJobTimeout: "0"
+*SuggestedWaitTimeout: "0"
+*PrintPSErrors: True
+
+
+*FileSystem: True
+*?FileSystem: " 
+	save false
+	(%disk?%) 
+	{ currentdevparams dup /Writeable known
+		{ /Writeable get {pop true} if }  { pop } ifelse 
+	} 10 string /IODevice resourceforall
+	{(True)}{(False)} ifelse = flush
+	restore"
+*End
+
+
+
+*%==== Missing StartJobPassword & SystemParamsPassword in PS ===
+
+
+*Password: "()" 
+*ExitServer: "
+	count 0 eq
+	{ false } { true exch startjob } ifelse
+	not { 
+		(WARNING: Cannot modify initial VM.) =
+		(Missing or invalid password.) =
+		(Please contact the author of this software.) = flush quit
+	} if
+"
+*End
+
+
+*Reset: "				   
+	count 0 eq
+	{ false } { true exch startjob } ifelse
+	not { 
+		(WARNING: Cannot reset printer.) =
+		(Missing or invalid password.) =
+		(Please contact the author of this software.) = flush quit
+	} if
+	systemdict /quit get exec
+	(WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+
+*%Plus90|Minus90|Any
+*LandscapeOrientation: Plus90
+
+
+
+
+
+*%*************** Halftone Information ***************
+*% ScreenFreq and ScreenAngle be here in case some
+*% application trying to set halftone type to 1
+
+*DefaultHalftoneType: 100
+*ScreenFreq: "150.0"
+*ScreenAngle: "45.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "
+{abs   exch   abs   2 copy   add   1 gt   {1 sub   dup   mul   exch  
+1 sub   dup   mul   add   1 sub  } {dup   mul   exch   dup   mul  
+add   1 exch   sub  } ifelse  } bind
+"
+*End
+*ScreenProc Line: "{ pop } bind"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub } bind"
+
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub } bind"
+
+
+
+*%**************** Paper Handling ******************
+
+*OpenUI *PageSize/Page Size: PickOne
+*fr.Translation PageSize/Format papier: ""
+*es.Translation PageSize/Tamaño Papel: ""
+*it.Translation PageSize/Formato pagina: ""
+*de.Translation PageSize/PapierFormat: ""
+*pt.Translation PageSize/Formato de Papel: ""
+*nl.Translation PageSize/Papierformaat: ""
+
+
+*OrderDependency: 100 AnySetup *PageSize
+*DefaultPageSize: A4
+
+*PageSize A4/A4: "<</PageSize [595 842]>> setpagedevice"
+*fr.PageSize A4/A4: ""
+*es.PageSize A4/A4: ""
+*it.PageSize A4/A4: ""
+*de.PageSize A4/A4: ""
+*pt.PageSize A4/A4: ""
+*nl.PageSize A4/A4: ""
+
+*PageSize A5.Transverse/A5: "<</PageSize [420 595]>> setpagedevice"
+*fr.PageSize A5.Transverse/A5: ""
+*es.PageSize A5.Transverse/A5: ""
+*it.PageSize A5.Transverse/A5: ""
+*de.PageSize A5.Transverse/A5: ""
+*pt.PageSize A5.Transverse/A5: ""
+*nl.PageSize A5.Transverse/A5: ""
+
+*PageSize A6/A6: "<</PageSize [297 420]>> setpagedevice"
+*fr.PageSize A6/A6: ""
+*es.PageSize A6/A6: ""
+*it.PageSize A6/A6: ""
+*de.PageSize A6/A6: ""
+*pt.PageSize A6/A6: ""
+*nl.PageSize A6/A6: ""
+
+*PageSize B5.Transverse/B5 JIS: "<</PageSize [516 729]>> setpagedevice"
+*fr.PageSize B5.Transverse/B5 JIS: ""
+*es.PageSize B5.Transverse/B5 JIS: ""
+*it.PageSize B5.Transverse/B5 JIS: ""
+*de.PageSize B5.Transverse/B5 JIS: ""
+*pt.PageSize B5.Transverse/B5 JIS: ""
+*nl.PageSize B5.Transverse/B5 JIS: ""
+
+*PageSize Letter/Letter: "<</PageSize [612 792]>> setpagedevice"
+*fr.PageSize Letter/Letter: ""
+*es.PageSize Letter/Carta: ""
+*it.PageSize Letter/Letter: ""
+*de.PageSize Letter/Letter: ""
+*pt.PageSize Letter/Letter: ""
+*nl.PageSize Letter/Letter: ""
+
+*PageSize Statement/HalfLetter: "<</PageSize [396 612]>> setpagedevice"
+*fr.PageSize Statement/HalfLetter: ""
+*es.PageSize Statement/Mediacarta: ""
+*it.PageSize Statement/HalfLetter: ""
+*de.PageSize Statement/HalfLetter: ""
+*pt.PageSize Statement/HalfLetter: ""
+*nl.PageSize Statement/HalfLetter: ""
+
+*PageSize Legal/Legal: "<</PageSize [612 1008]>> setpagedevice"
+*fr.PageSize Legal/Legal: ""
+*es.PageSize Legal/Oficio: ""
+*it.PageSize Legal/Legal: ""
+*de.PageSize Legal/Legal: ""
+*pt.PageSize Legal/Legal: ""
+*nl.PageSize Legal/Legal: ""
+
+*PageSize GLT/Gov Letter: "<</PageSize [576 756]>> setpagedevice"
+*fr.PageSize GLT/Gov Letter: ""
+*es.PageSize GLT/Carta del gobierno: ""
+*it.PageSize GLT/Gov Letter: ""
+*de.PageSize GLT/Gov Letter: ""
+*pt.PageSize GLT/Gov Letter: ""
+*nl.PageSize GLT/Gov Letter: ""
+
+*PageSize FanFoldGermanLegal/Gov Legal: "<</PageSize [612 936]>> setpagedevice"
+*fr.PageSize FanFoldGermanLegal/Gov Legal: ""
+*es.PageSize FanFoldGermanLegal/Oficio del gobierno: ""
+*it.PageSize FanFoldGermanLegal/Gov Legal: ""
+*de.PageSize FanFoldGermanLegal/Gov Legal: ""
+*pt.PageSize FanFoldGermanLegal/Gov Legal: ""
+*nl.PageSize FanFoldGermanLegal/Gov Legal: ""
+
+*PageSize Executive/Executive: "<</PageSize [522 756]>> setpagedevice"
+*fr.PageSize Executive/Executive: ""
+*es.PageSize Executive/Ejecutivo: ""
+*it.PageSize Executive/Executive: ""
+*de.PageSize Executive/Executive: ""
+*pt.PageSize Executive/Executive: ""
+*nl.PageSize Executive/Executive: ""
+
+*PageSize Folio/F4: "<</PageSize [595 935]>> setpagedevice"
+*fr.PageSize Folio/F4: ""
+*es.PageSize Folio/F4: ""
+*it.PageSize Folio/F4: ""
+*de.PageSize Folio/F4: ""
+*pt.PageSize Folio/F4: ""
+*nl.PageSize Folio/F4: ""
+
+*PageSize EnvMonarch/Monarch: "<</PageSize [279 540]>> setpagedevice"
+*fr.PageSize EnvMonarch/Monarch: ""
+*es.PageSize EnvMonarch/Monarca: ""
+*it.PageSize EnvMonarch/Monarch: ""
+*de.PageSize EnvMonarch/Monarch: ""
+*pt.PageSize EnvMonarch/Monarch: ""
+*nl.PageSize EnvMonarch/Monarch: ""
+
+*PageSize Env10/COM10 Env: "<</PageSize [297 684]>> setpagedevice"
+*fr.PageSize Env10/COM10 Env: ""
+*es.PageSize Env10/Sobre COM10: ""
+*it.PageSize Env10/COM10 Env: ""
+*de.PageSize Env10/COM10-Umschlag: ""
+*pt.PageSize Env10/COM10 Env: ""
+*nl.PageSize Env10/COM10 Env: ""
+
+*PageSize EnvDL/DL Env: "<</PageSize [312 624]>> setpagedevice"
+*fr.PageSize EnvDL/DL Env: ""
+*es.PageSize EnvDL/Sobre DL: ""
+*it.PageSize EnvDL/DL Env: ""
+*de.PageSize EnvDL/DL-Umschlag: ""
+*pt.PageSize EnvDL/DL Env: ""
+*nl.PageSize EnvDL/DL Env: ""
+
+*PageSize EnvC5/C5 Env: "<</PageSize [459 648]>> setpagedevice"
+*fr.PageSize EnvC5/C5 Env: ""
+*es.PageSize EnvC5/Sobre C5: ""
+*it.PageSize EnvC5/C5 Env: ""
+*de.PageSize EnvC5/C5-Umschlag: ""
+*pt.PageSize EnvC5/C5 Env: ""
+*nl.PageSize EnvC5/C5 Env: ""
+
+*PageSize EnvC6/C6 Env: "<</PageSize [323 459]>> setpagedevice"
+*fr.PageSize EnvC6/C6 Env: ""
+*es.PageSize EnvC6/Sobre C6: ""
+*it.PageSize EnvC6/C6 Env: ""
+*de.PageSize EnvC6/C6-Umschlag: ""
+*pt.PageSize EnvC6/C6 Env: ""
+*nl.PageSize EnvC6/C6 Env: ""
+
+*PageSize EnvISOB5/IB5 Env: "<</PageSize [499 709]>> setpagedevice"
+*fr.PageSize EnvISOB5/IB5 Env: ""
+*es.PageSize EnvISOB5/Sobre IB5: ""
+*it.PageSize EnvISOB5/IB5 Env: ""
+*de.PageSize EnvISOB5/IB5-Umschlag: ""
+*pt.PageSize EnvISOB5/IB5 Env: ""
+*nl.PageSize EnvISOB5/IB5 Env: ""
+
+*?PageSize: "
+save
+	currentpagedevice /PageSize get aload pop
+	2 copy gt {exch} if 
+	(Unknown) 
+	<<
+    [595 842]  (A4)
+    [420 595]  (A5.Transverse)
+    [297 420]  (A6)
+    [516 729]  (B5.Transverse)
+    [612 792]  (Letter)
+    [396 612]  (Statement)
+    [612 1008]  (Legal)
+    [576 756]  (GLT)
+    [612 936]  (FanFoldGermanLegal)
+    [522 756]  (Executive)
+    [595 935]  (Folio)
+    [279 540]  (EnvMonarch)
+    [297 684]  (Env10)
+    [312 624]  (EnvDL)
+    [459 648]  (EnvC5)
+    [323 459]  (EnvC6)
+    [499 709]  (EnvISOB5)
+  >>
+	{ exch aload pop 4 index sub abs 5 le exch 
+	5 index sub abs 5 le and 
+	{exch pop exit} {pop} ifelse
+	} bind forall
+	= flush pop pop
+restore 
+"
+*End
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion/Page Size: PickOne
+*fr.Translation PageRegion/Format papier: ""
+*es.Translation PageRegion/Tamaño Papel: ""
+*it.Translation PageRegion/Formato pagina: ""
+*de.Translation PageRegion/PapierFormat: ""
+*pt.Translation PageRegion/Formato de Papel: ""
+*nl.Translation PageRegion/Papierformaat: ""
+
+*OrderDependency: 110 AnySetup *PageRegion
+*DefaultPageRegion: A4
+*PageRegion A4/A4: "<</PageSize [595 842]>> setpagedevice"
+*fr.PageRegion A4/A4: ""
+*es.PageRegion A4/A4: ""
+*it.PageRegion A4/A4: ""
+*de.PageRegion A4/A4: ""
+*pt.PageRegion A4/A4: ""
+*nl.PageRegion A4/A4: ""
+
+*PageRegion A5.Transverse/A5: "<</PageSize [420 595]>> setpagedevice"
+*fr.PageRegion A5.Transverse/A5: ""
+*es.PageRegion A5.Transverse/A5: ""
+*it.PageRegion A5.Transverse/A5: ""
+*de.PageRegion A5.Transverse/A5: ""
+*pt.PageRegion A5.Transverse/A5: ""
+*nl.PageRegion A5.Transverse/A5: ""
+
+*PageRegion A6/A6: "<</PageSize [297 420]>> setpagedevice"
+*fr.PageRegion A6/A6: ""
+*es.PageRegion A6/A6: ""
+*it.PageRegion A6/A6: ""
+*de.PageRegion A6/A6: ""
+*pt.PageRegion A6/A6: ""
+*nl.PageRegion A6/A6: ""
+
+*PageRegion B5.Transverse/B5 JIS: "<</PageSize [516 729]>> setpagedevice"
+*fr.PageRegion B5.Transverse/B5 JIS: ""
+*es.PageRegion B5.Transverse/B5 JIS: ""
+*it.PageRegion B5.Transverse/B5 JIS: ""
+*de.PageRegion B5.Transverse/B5 JIS: ""
+*pt.PageRegion B5.Transverse/B5 JIS: ""
+*nl.PageRegion B5.Transverse/B5 JIS: ""
+
+*PageRegion Letter/Letter: "<</PageSize [612 792]>> setpagedevice"
+*fr.PageRegion Letter/Letter: ""
+*es.PageRegion Letter/Carta: ""
+*it.PageRegion Letter/Letter: ""
+*de.PageRegion Letter/Letter: ""
+*pt.PageRegion Letter/Letter: ""
+*nl.PageRegion Letter/Letter: ""
+
+*PageRegion Statement/HalfLetter: "<</PageSize [396 612]>> setpagedevice"
+*fr.PageRegion Statement/HalfLetter: ""
+*es.PageRegion Statement/Mediacarta: ""
+*it.PageRegion Statement/HalfLetter: ""
+*de.PageRegion Statement/HalfLetter: ""
+*pt.PageRegion Statement/HalfLetter: ""
+*nl.PageRegion Statement/HalfLetter: ""
+
+*PageRegion Legal/Legal: "<</PageSize [612 1008]>> setpagedevice"
+*fr.PageRegion Legal/Legal: ""
+*es.PageRegion Legal/Oficio: ""
+*it.PageRegion Legal/Legal: ""
+*de.PageRegion Legal/Legal: ""
+*pt.PageRegion Legal/Legal: ""
+*nl.PageRegion Legal/Legal: ""
+
+*PageRegion GLT/Gov Letter: "<</PageSize [576 756]>> setpagedevice"
+*fr.PageRegion GLT/Gov Letter: ""
+*es.PageRegion GLT/Carta del gobierno: ""
+*it.PageRegion GLT/Gov Letter: ""
+*de.PageRegion GLT/Gov Letter: ""
+*pt.PageRegion GLT/Gov Letter: ""
+*nl.PageRegion GLT/Gov Letter: ""
+
+*PageRegion FanFoldGermanLegal/Gov Legal: "<</PageSize [612 936]>> setpagedevice"
+*fr.PageRegion FanFoldGermanLegal/Gov Legal: ""
+*es.PageRegion FanFoldGermanLegal/Oficio del gobierno: ""
+*it.PageRegion FanFoldGermanLegal/Gov Legal: ""
+*de.PageRegion FanFoldGermanLegal/Gov Legal: ""
+*pt.PageRegion FanFoldGermanLegal/Gov Legal: ""
+*nl.PageRegion FanFoldGermanLegal/Gov Legal: ""
+
+*PageRegion Executive/Executive: "<</PageSize [522 756]>> setpagedevice"
+*fr.PageRegion Executive/Executive: ""
+*es.PageRegion Executive/Ejecutivo: ""
+*it.PageRegion Executive/Executive: ""
+*de.PageRegion Executive/Executive: ""
+*pt.PageRegion Executive/Executive: ""
+*nl.PageRegion Executive/Executive: ""
+
+*PageRegion Folio/F4: "<</PageSize [595 935]>> setpagedevice"
+*fr.PageRegion Folio/F4: ""
+*es.PageRegion Folio/F4: ""
+*it.PageRegion Folio/F4: ""
+*de.PageRegion Folio/F4: ""
+*pt.PageRegion Folio/F4: ""
+*nl.PageRegion Folio/F4: ""
+
+*PageRegion EnvMonarch/Monarch: "<</PageSize [279 540]>> setpagedevice"
+*fr.PageRegion EnvMonarch/Monarch: ""
+*es.PageRegion EnvMonarch/Monarca: ""
+*it.PageRegion EnvMonarch/Monarch: ""
+*de.PageRegion EnvMonarch/Monarch: ""
+*pt.PageRegion EnvMonarch/Monarch: ""
+*nl.PageRegion EnvMonarch/Monarch: ""
+
+*PageRegion Env10/COM10 Env: "<</PageSize [297 684]>> setpagedevice"
+*fr.PageRegion Env10/COM10 Env: ""
+*es.PageRegion Env10/Sobre COM10: ""
+*it.PageRegion Env10/COM10 Env: ""
+*de.PageRegion Env10/COM10-Umschlag: ""
+*pt.PageRegion Env10/COM10 Env: ""
+*nl.PageRegion Env10/COM10 Env: ""
+
+*PageRegion EnvDL/DL Env: "<</PageSize [312 624]>> setpagedevice"
+*fr.PageRegion EnvDL/DL Env: ""
+*es.PageRegion EnvDL/Sobre DL: ""
+*it.PageRegion EnvDL/DL Env: ""
+*de.PageRegion EnvDL/DL-Umschlag: ""
+*pt.PageRegion EnvDL/DL Env: ""
+*nl.PageRegion EnvDL/DL Env: ""
+
+*PageRegion EnvC5/C5 Env: "<</PageSize [459 648]>> setpagedevice"
+*fr.PageRegion EnvC5/C5 Env: ""
+*es.PageRegion EnvC5/Sobre C5: ""
+*it.PageRegion EnvC5/C5 Env: ""
+*de.PageRegion EnvC5/C5-Umschlag: ""
+*pt.PageRegion EnvC5/C5 Env: ""
+*nl.PageRegion EnvC5/C5 Env: ""
+
+*PageRegion EnvC6/C6 Env: "<</PageSize [323 459]>> setpagedevice"
+*fr.PageRegion EnvC6/C6 Env: ""
+*es.PageRegion EnvC6/Sobre C6: ""
+*it.PageRegion EnvC6/C6 Env: ""
+*de.PageRegion EnvC6/C6-Umschlag: ""
+*pt.PageRegion EnvC6/C6 Env: ""
+*nl.PageRegion EnvC6/C6 Env: ""
+
+*PageRegion EnvISOB5/IB5 Env: "<</PageSize [499 709]>> setpagedevice"
+*fr.PageRegion EnvISOB5/IB5 Env: ""
+*es.PageRegion EnvISOB5/Sobre IB5: ""
+*it.PageRegion EnvISOB5/IB5 Env: ""
+*de.PageRegion EnvISOB5/IB5-Umschlag: ""
+*pt.PageRegion EnvISOB5/IB5 Env: ""
+*nl.PageRegion EnvISOB5/IB5 Env: ""
+
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: A4
+*ImageableArea A4/A4: "14 14 581 828"
+*fr.ImageableArea A4/A4: ""
+*es.ImageableArea A4/A4: ""
+*it.ImageableArea A4/A4: ""
+*de.ImageableArea A4/A4: ""
+*pt.ImageableArea A4/A4: ""
+*nl.ImageableArea A4/A4: ""
+
+*ImageableArea A5.Transverse/A5: "14 14 406 581"
+*fr.ImageableArea A5.Transverse/A5: ""
+*es.ImageableArea A5.Transverse/A5: ""
+*it.ImageableArea A5.Transverse/A5: ""
+*de.ImageableArea A5.Transverse/A5: ""
+*pt.ImageableArea A5.Transverse/A5: ""
+*nl.ImageableArea A5.Transverse/A5: ""
+
+*ImageableArea A6/A6: "14 14 283 406"
+*fr.ImageableArea A6/A6: ""
+*es.ImageableArea A6/A6: ""
+*it.ImageableArea A6/A6: ""
+*de.ImageableArea A6/A6: ""
+*pt.ImageableArea A6/A6: ""
+*nl.ImageableArea A6/A6: ""
+
+*ImageableArea B5.Transverse/B5 JIS: "14 14 502 715"
+*fr.ImageableArea B5.Transverse/B5 JIS: ""
+*es.ImageableArea B5.Transverse/B5 JIS: ""
+*it.ImageableArea B5.Transverse/B5 JIS: ""
+*de.ImageableArea B5.Transverse/B5 JIS: ""
+*pt.ImageableArea B5.Transverse/B5 JIS: ""
+*nl.ImageableArea B5.Transverse/B5 JIS: ""
+
+*ImageableArea Letter/Letter: "14 14 598 778"
+*fr.ImageableArea Letter/Letter: ""
+*es.ImageableArea Letter/Carta: ""
+*it.ImageableArea Letter/Letter: ""
+*de.ImageableArea Letter/Letter: ""
+*pt.ImageableArea Letter/Letter: ""
+*nl.ImageableArea Letter/Letter: ""
+
+*ImageableArea Statement/HalfLetter: "14 14 382 598"
+*fr.ImageableArea Statement/HalfLetter: ""
+*es.ImageableArea Statement/Mediacarta: ""
+*it.ImageableArea Statement/HalfLetter: ""
+*de.ImageableArea Statement/HalfLetter: ""
+*pt.ImageableArea Statement/HalfLetter: ""
+*nl.ImageableArea Statement/HalfLetter: ""
+
+*ImageableArea Legal/Legal: "14 14 598 994"
+*fr.ImageableArea Legal/Legal: ""
+*es.ImageableArea Legal/Oficio: ""
+*it.ImageableArea Legal/Legal: ""
+*de.ImageableArea Legal/Legal: ""
+*pt.ImageableArea Legal/Legal: ""
+*nl.ImageableArea Legal/Legal: ""
+
+*ImageableArea GLT/Gov Letter: "14 14 562 742"
+*fr.ImageableArea GLT/Gov Letter: ""
+*es.ImageableArea GLT/Carta del gobierno: ""
+*it.ImageableArea GLT/Gov Letter: ""
+*de.ImageableArea GLT/Gov Letter: ""
+*pt.ImageableArea GLT/Gov Letter: ""
+*nl.ImageableArea GLT/Gov Letter: ""
+
+*ImageableArea FanFoldGermanLegal/Gov Legal: "14 14 598 922"
+*fr.ImageableArea FanFoldGermanLegal/Gov Legal: ""
+*es.ImageableArea FanFoldGermanLegal/Oficio del gobierno: ""
+*it.ImageableArea FanFoldGermanLegal/Gov Legal: ""
+*de.ImageableArea FanFoldGermanLegal/Gov Legal: ""
+*pt.ImageableArea FanFoldGermanLegal/Gov Legal: ""
+*nl.ImageableArea FanFoldGermanLegal/Gov Legal: ""
+
+*ImageableArea Executive/Executive: "14 14 508 742"
+*fr.ImageableArea Executive/Executive: ""
+*es.ImageableArea Executive/Ejecutivo: ""
+*it.ImageableArea Executive/Executive: ""
+*de.ImageableArea Executive/Executive: ""
+*pt.ImageableArea Executive/Executive: ""
+*nl.ImageableArea Executive/Executive: ""
+
+*ImageableArea Folio/F4: "14 14 581 921"
+*fr.ImageableArea Folio/F4: ""
+*es.ImageableArea Folio/F4: ""
+*it.ImageableArea Folio/F4: ""
+*de.ImageableArea Folio/F4: ""
+*pt.ImageableArea Folio/F4: ""
+*nl.ImageableArea Folio/F4: ""
+
+*ImageableArea EnvMonarch/Monarch: "14 14 265 526"
+*fr.ImageableArea EnvMonarch/Monarch: ""
+*es.ImageableArea EnvMonarch/Monarca: ""
+*it.ImageableArea EnvMonarch/Monarch: ""
+*de.ImageableArea EnvMonarch/Monarch: ""
+*pt.ImageableArea EnvMonarch/Monarch: ""
+*nl.ImageableArea EnvMonarch/Monarch: ""
+
+*ImageableArea Env10/COM10 Env: "14 14 283 670"
+*fr.ImageableArea Env10/COM10 Env: ""
+*es.ImageableArea Env10/Sobre COM10: ""
+*it.ImageableArea Env10/COM10 Env: ""
+*de.ImageableArea Env10/COM10-Umschlag: ""
+*pt.ImageableArea Env10/COM10 Env: ""
+*nl.ImageableArea Env10/COM10 Env: ""
+
+*ImageableArea EnvDL/DL Env: "14 14 298 610"
+*fr.ImageableArea EnvDL/DL Env: ""
+*es.ImageableArea EnvDL/Sobre DL: ""
+*it.ImageableArea EnvDL/DL Env: ""
+*de.ImageableArea EnvDL/DL-Umschlag: ""
+*pt.ImageableArea EnvDL/DL Env: ""
+*nl.ImageableArea EnvDL/DL Env: ""
+
+*ImageableArea EnvC5/C5 Env: "14 14 445 634"
+*fr.ImageableArea EnvC5/C5 Env: ""
+*es.ImageableArea EnvC5/Sobre C5: ""
+*it.ImageableArea EnvC5/C5 Env: ""
+*de.ImageableArea EnvC5/C5-Umschlag: ""
+*pt.ImageableArea EnvC5/C5 Env: ""
+*nl.ImageableArea EnvC5/C5 Env: ""
+
+*ImageableArea EnvC6/C6 Env: "14 14 309 445"
+*fr.ImageableArea EnvC6/C6 Env: ""
+*es.ImageableArea EnvC6/Sobre C6: ""
+*it.ImageableArea EnvC6/C6 Env: ""
+*de.ImageableArea EnvC6/C6-Umschlag: ""
+*pt.ImageableArea EnvC6/C6 Env: ""
+*nl.ImageableArea EnvC6/C6 Env: ""
+
+*ImageableArea EnvISOB5/IB5 Env: "14 14 485 695"
+*fr.ImageableArea EnvISOB5/IB5 Env: ""
+*es.ImageableArea EnvISOB5/Sobre IB5: ""
+*it.ImageableArea EnvISOB5/IB5 Env: ""
+*de.ImageableArea EnvISOB5/IB5-Umschlag: ""
+*pt.ImageableArea EnvISOB5/IB5 Env: ""
+*nl.ImageableArea EnvISOB5/IB5 Env: ""
+
+*?ImageableArea: "
+	save
+	/pr {10 string cvs print ( ) print} def
+	/prnl {10 string cvs = flush} def
+	/upperright {100 mul floor 100 div} bind def
+	/lowerleft {100 mul ceiling 100 div} bind def
+	/prall {2 {lowerleft pr} repeat upperright pr upperright prnl} def
+	newpath clippath pathbbox exch 4 2 roll exch prall
+	restore
+"
+*End
+
+*DefaultPaperDimension: A4
+
+*PaperDimension A4/A4: "595 842"
+*fr.PaperDimension A4/A4: ""
+*es.PaperDimension A4/A4: ""
+*it.PaperDimension A4/A4: ""
+*de.PaperDimension A4/A4: ""
+*pt.PaperDimension A4/A4: ""
+*nl.PaperDimension A4/A4: ""
+
+*PaperDimension A5.Transverse/A5: "420 595"
+*fr.PaperDimension A5.Transverse/A5: ""
+*es.PaperDimension A5.Transverse/A5: ""
+*it.PaperDimension A5.Transverse/A5: ""
+*de.PaperDimension A5.Transverse/A5: ""
+*pt.PaperDimension A5.Transverse/A5: ""
+*nl.PaperDimension A5.Transverse/A5: ""
+
+*PaperDimension A6/A6: "297 420"
+*fr.PaperDimension A6/A6: ""
+*es.PaperDimension A6/A6: ""
+*it.PaperDimension A6/A6: ""
+*de.PaperDimension A6/A6: ""
+*pt.PaperDimension A6/A6: ""
+*nl.PaperDimension A6/A6: ""
+
+*PaperDimension B5.Transverse/B5 JIS: "516 729"
+*fr.PaperDimension B5.Transverse/B5 JIS: ""
+*es.PaperDimension B5.Transverse/B5 JIS: ""
+*it.PaperDimension B5.Transverse/B5 JIS: ""
+*de.PaperDimension B5.Transverse/B5 JIS: ""
+*pt.PaperDimension B5.Transverse/B5 JIS: ""
+*nl.PaperDimension B5.Transverse/B5 JIS: ""
+
+*PaperDimension Letter/Letter: "612 792"
+*fr.PaperDimension Letter/Letter: ""
+*es.PaperDimension Letter/Carta: ""
+*it.PaperDimension Letter/Letter: ""
+*de.PaperDimension Letter/Letter: ""
+*pt.PaperDimension Letter/Letter: ""
+*nl.PaperDimension Letter/Letter: ""
+
+*PaperDimension Statement/HalfLetter: "396 612"
+*fr.PaperDimension Statement/HalfLetter: ""
+*es.PaperDimension Statement/Mediacarta: ""
+*it.PaperDimension Statement/HalfLetter: ""
+*de.PaperDimension Statement/HalfLetter: ""
+*pt.PaperDimension Statement/HalfLetter: ""
+*nl.PaperDimension Statement/HalfLetter: ""
+
+*PaperDimension Legal/Legal: "612 1008"
+*fr.PaperDimension Legal/Legal: ""
+*es.PaperDimension Legal/Oficio: ""
+*it.PaperDimension Legal/Legal: ""
+*de.PaperDimension Legal/Legal: ""
+*pt.PaperDimension Legal/Legal: ""
+*nl.PaperDimension Legal/Legal: ""
+
+*PaperDimension GLT/Gov Letter: "576 756"
+*fr.PaperDimension GLT/Gov Letter: ""
+*es.PaperDimension GLT/Carta del gobierno: ""
+*it.PaperDimension GLT/Gov Letter: ""
+*de.PaperDimension GLT/Gov Letter: ""
+*pt.PaperDimension GLT/Gov Letter: ""
+*nl.PaperDimension GLT/Gov Letter: ""
+
+*PaperDimension FanFoldGermanLegal/Gov Legal: "612 936"
+*fr.PaperDimension FanFoldGermanLegal/Gov Legal: ""
+*es.PaperDimension FanFoldGermanLegal/Oficio del gobierno: ""
+*it.PaperDimension FanFoldGermanLegal/Gov Legal: ""
+*de.PaperDimension FanFoldGermanLegal/Gov Legal: ""
+*pt.PaperDimension FanFoldGermanLegal/Gov Legal: ""
+*nl.PaperDimension FanFoldGermanLegal/Gov Legal: ""
+
+*PaperDimension Executive/Executive: "522 756"
+*fr.PaperDimension Executive/Executive: ""
+*es.PaperDimension Executive/Ejecutivo: ""
+*it.PaperDimension Executive/Executive: ""
+*de.PaperDimension Executive/Executive: ""
+*pt.PaperDimension Executive/Executive: ""
+*nl.PaperDimension Executive/Executive: ""
+
+*PaperDimension Folio/F4: "595 935"
+*fr.PaperDimension Folio/F4: ""
+*es.PaperDimension Folio/F4: ""
+*it.PaperDimension Folio/F4: ""
+*de.PaperDimension Folio/F4: ""
+*pt.PaperDimension Folio/F4: ""
+*nl.PaperDimension Folio/F4: ""
+
+*PaperDimension EnvMonarch/Monarch: "279 540"
+*fr.PaperDimension EnvMonarch/Monarch: ""
+*es.PaperDimension EnvMonarch/Monarca: ""
+*it.PaperDimension EnvMonarch/Monarch: ""
+*de.PaperDimension EnvMonarch/Monarch: ""
+*pt.PaperDimension EnvMonarch/Monarch: ""
+*nl.PaperDimension EnvMonarch/Monarch: ""
+
+*PaperDimension Env10/COM10 Env: "297 684"
+*fr.PaperDimension Env10/COM10 Env: ""
+*es.PaperDimension Env10/Sobre COM10: ""
+*it.PaperDimension Env10/COM10 Env: ""
+*de.PaperDimension Env10/COM10-Umschlag: ""
+*pt.PaperDimension Env10/COM10 Env: ""
+*nl.PaperDimension Env10/COM10 Env: ""
+
+*PaperDimension EnvDL/DL Env: "312 624"
+*fr.PaperDimension EnvDL/DL Env: ""
+*es.PaperDimension EnvDL/Sobre DL: ""
+*it.PaperDimension EnvDL/DL Env: ""
+*de.PaperDimension EnvDL/DL-Umschlag: ""
+*pt.PaperDimension EnvDL/DL Env: ""
+*nl.PaperDimension EnvDL/DL Env: ""
+
+*PaperDimension EnvC5/C5 Env: "459 648"
+*fr.PaperDimension EnvC5/C5 Env: ""
+*es.PaperDimension EnvC5/Sobre C5: ""
+*it.PaperDimension EnvC5/C5 Env: ""
+*de.PaperDimension EnvC5/C5-Umschlag: ""
+*pt.PaperDimension EnvC5/C5 Env: ""
+*nl.PaperDimension EnvC5/C5 Env: ""
+
+*PaperDimension EnvC6/C6 Env: "323 459"
+*fr.PaperDimension EnvC6/C6 Env: ""
+*es.PaperDimension EnvC6/Sobre C6: ""
+*it.PaperDimension EnvC6/C6 Env: ""
+*de.PaperDimension EnvC6/C6-Umschlag: ""
+*pt.PaperDimension EnvC6/C6 Env: ""
+*nl.PaperDimension EnvC6/C6 Env: ""
+
+*PaperDimension EnvISOB5/IB5 Env: "499 709"
+*fr.PaperDimension EnvISOB5/IB5 Env: ""
+*es.PaperDimension EnvISOB5/Sobre IB5: ""
+*it.PaperDimension EnvISOB5/IB5 Env: ""
+*de.PaperDimension EnvISOB5/IB5-Umschlag: ""
+*pt.PaperDimension EnvISOB5/IB5 Env: ""
+*nl.PaperDimension EnvISOB5/IB5 Env: ""
+
+
+
+*% ====== Custom PageSize ======
+*NonUIConstraints: *CustomPageSize True *EPRotate90Degrees  Rotate0
+*NonUIConstraints: *CustomPageSize True *EPRotate90Degrees  Rotate90
+*NonUIConstraints: *EPRotate90Degrees Rotate0   *CustomPageSize True
+*NonUIConstraints: *EPRotate90Degrees Rotate90  *CustomPageSize True
+*NonUIConstraints: *Duplex DuplexTumble *CustomPageSize True
+*NonUIConstraints: *Duplex DuplexNoTumble  *CustomPageSize True
+*NonUIConstraints: *CustomPageSize True *Duplex DuplexTumble
+*NonUIConstraints: *CustomPageSize True *Duplex DuplexNoTumble
+
+*HWMargins: 14 14 14 14
+*LeadingEdge Long: ""
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Long
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*NonUIOrderDependency: 160 AnySetup *CustomPageSize
+*CustomPageSize True: "
+pop pop 
+<< /Orientation 3 -1 roll dup 2 mod 0 eq {1 add} {1 sub} ifelse
+   /PageSize [7 -2 roll] 
+>> setpagedevice"
+*End
+*ParamCustomPageSize Width: 1 points 252 612
+*ParamCustomPageSize Height: 2 points 360 1008
+*ParamCustomPageSize Orientation: 3 int 0 3
+*ParamCustomPageSize WidthOffset: 4 points 0 0
+*ParamCustomPageSize HeightOffset: 5 points 0 0
+
+
+
+*% ==== MediaType ====
+*% Should be after PageSize code 
+*% Must be after InputSlot
+*OpenGroup: EPQualitySettings/Quality
+*fr.Translation EPQualitySettings/Qualité: ""
+*es.Translation EPQualitySettings/ResoluciÓn: ""
+*it.Translation EPQualitySettings/Qualità: ""
+*de.Translation EPQualitySettings/Qualität: ""
+*pt.Translation EPQualitySettings/Resolução: ""
+*nl.Translation EPQualitySettings/Afdrukkwaliteit: ""
+
+*OpenUI *MediaType/MediaType: PickOne
+*fr.Translation MediaType/Type de papier: ""
+*es.Translation MediaType/Tipo Papel: ""
+*it.Translation MediaType/Tipo supporto: ""
+*de.Translation MediaType/Druckmedium: ""
+*pt.Translation MediaType/Tipo de Papel: ""
+*nl.Translation MediaType/Afdrukmateriaal: ""
+
+*OrderDependency: 150 AnySetup *MediaType
+*DefaultMediaType: Plain
+*MediaType Unspecified/Unspecified: "mark {
+	<</MediaType (Unspecified)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Unspecified/Non spécifié: ""
+*es.MediaType Unspecified/Sin especificar: ""
+*it.MediaType Unspecified/Non specificato: ""
+*de.MediaType Unspecified/Undefiniert: ""
+*pt.MediaType Unspecified/Não especificado: ""
+*nl.MediaType Unspecified/Onbepaald: ""
+
+*MediaType Plain/Plain: "mark {
+	<</MediaType (Plain)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Plain/Ordinaire: ""
+*es.MediaType Plain/llano: ""
+*it.MediaType Plain/Comune: ""
+*de.MediaType Plain/Normalpapier: ""
+*pt.MediaType Plain/planície: ""
+*nl.MediaType Plain/Gewoon: ""
+
+*MediaType Plain_Back/Plain (Back): "mark {
+	<</MediaType (Plain_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Plain_Back/Ordinaire (Verso): ""
+*es.MediaType Plain_Back/llano (Detrás): ""
+*it.MediaType Plain_Back/Comune (retro): ""
+*de.MediaType Plain_Back/Normalpapier (Rückseite): ""
+*pt.MediaType Plain_Back/planície(Verso): ""
+*nl.MediaType Plain_Back/Gewoon (Achter): ""
+
+*MediaType Semi_Thick/Semi-Thick: "mark {
+	<</MediaType (Semi_Thick)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Semi_Thick/Semi-épais: ""
+*es.MediaType Semi_Thick/Semi-grueso: ""
+*it.MediaType Semi_Thick/Semi-spessa: ""
+*de.MediaType Semi_Thick/Halb-dick: ""
+*pt.MediaType Semi_Thick/Semiespesso: ""
+*nl.MediaType Semi_Thick/Halfdik: ""
+
+*MediaType Semi_Thick_Back/Semi-Thick (Back): "mark {
+	<</MediaType (Semi_Thick_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Semi_Thick_Back/Semi-épais (Verso): ""
+*es.MediaType Semi_Thick_Back/Semi-grueso (Detrás): ""
+*it.MediaType Semi_Thick_Back/Semi-spessa (retro): ""
+*de.MediaType Semi_Thick_Back/Halb-dick (Rückseite): ""
+*pt.MediaType Semi_Thick_Back/Semiespesso (Verso): ""
+*nl.MediaType Semi_Thick_Back/Halfdik (Achter): ""
+
+*MediaType Preprinted/Preprinted: "mark {
+	<</MediaType (Preprinted)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Preprinted/Pré-imprimé: ""
+*es.MediaType Preprinted/Preimpreso: ""
+*it.MediaType Preprinted/Prestamp: ""
+*de.MediaType Preprinted/Vordruck: ""
+*pt.MediaType Preprinted/Pré-imp: ""
+*nl.MediaType Preprinted/Preprinted: ""
+
+*MediaType Preprinted_Back/Preprinted (Back): "mark {
+	<</MediaType (Preprinted_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Preprinted_Back/Pré-imprimé  (Verso): ""
+*es.MediaType Preprinted_Back/Preimpreso (Detrás): ""
+*it.MediaType Preprinted_Back/Prestamp (retro): ""
+*de.MediaType Preprinted_Back/Vordruck (Rückseite): ""
+*pt.MediaType Preprinted_Back/Pré-imp (Verso): ""
+*nl.MediaType Preprinted_Back/Preprinted (Achter): ""
+
+*MediaType Letterhead/Letterhead: "mark {
+	<</MediaType (Letterhead)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Letterhead/En tête: ""
+*es.MediaType Letterhead/Encabezado: ""
+*it.MediaType Letterhead/Intestata: ""
+*de.MediaType Letterhead/Letterhead: ""
+*pt.MediaType Letterhead/Timbrado: ""
+*nl.MediaType Letterhead/Briefhoofd: ""
+
+*MediaType Letterhead_Back/Letterhead (Back): "mark {
+	<</MediaType (Letterhead_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Letterhead_Back/En tête (Verso): ""
+*es.MediaType Letterhead_Back/Encabezado (Detrás): ""
+*it.MediaType Letterhead_Back/Intestata (retro): ""
+*de.MediaType Letterhead_Back/Letterhead (Rückseite): ""
+*pt.MediaType Letterhead_Back/Timbrado (Verso): ""
+*nl.MediaType Letterhead_Back/Briefhoofd (Achter): ""
+
+*MediaType Recycled/Recycled: "mark {
+	<</MediaType (Recycled)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Recycled/Recyclé : ""
+*es.MediaType Recycled/Reciclado: ""
+*it.MediaType Recycled/Riciclata: ""
+*de.MediaType Recycled/Recycling Papier: ""
+*pt.MediaType Recycled/Reciclado: ""
+*nl.MediaType Recycled/Gerecycleerd: ""
+
+*MediaType Recycled_Back/Recycled (Back): "mark {
+	<</MediaType (Recycled_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Recycled_Back/Recyclé (Verso): ""
+*es.MediaType Recycled_Back/Reciclado (Detrás): ""
+*it.MediaType Recycled_Back/Riciclata (retro): ""
+*de.MediaType Recycled_Back/Recycling Papier (Rückseite): ""
+*pt.MediaType Recycled_Back/Reciclado (Verso): ""
+*nl.MediaType Recycled_Back/Gerecycleerd (Achter): ""
+
+*MediaType Color/Color: "mark {
+	<</MediaType (Color)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Color/Couleur: ""
+*es.MediaType Color/Color: ""
+*it.MediaType Color/Colore: ""
+*de.MediaType Color/Farbe: ""
+*pt.MediaType Color/Cor: ""
+*nl.MediaType Color/Kleur: ""
+
+*MediaType Color_Back/Color (Back): "mark {
+	<</MediaType (Color_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Color_Back/Couleur (Verso): ""
+*es.MediaType Color_Back/Color (Detrás): ""
+*it.MediaType Color_Back/Colore (retro): ""
+*de.MediaType Color_Back/Farbe (Rückseite): ""
+*pt.MediaType Color_Back/Cor (Verso): ""
+*nl.MediaType Color_Back/Kleur (Achter): ""
+
+*MediaType Labels/Labels: "mark {
+	<</MediaType (Labels)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Labels/Etiquettes: ""
+*es.MediaType Labels/Etiquetas: ""
+*it.MediaType Labels/Etichette: ""
+*de.MediaType Labels/Etikett: ""
+*pt.MediaType Labels/Etiquetas: ""
+*nl.MediaType Labels/Labels: ""
+
+*MediaType Transparency/Transparency: "mark {
+	<</MediaType (Transparency)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Transparency/Transparent: ""
+*es.MediaType Transparency/Transparencia: ""
+*it.MediaType Transparency/Lucido: ""
+*de.MediaType Transparency/Folie: ""
+*pt.MediaType Transparency/Transparências: ""
+*nl.MediaType Transparency/Transparant: ""
+
+*MediaType Thick/Thick: "mark {
+	<</MediaType (Thick)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Thick/Epais: ""
+*es.MediaType Thick/Grueso: ""
+*it.MediaType Thick/Spesso: ""
+*de.MediaType Thick/Schwer: ""
+*pt.MediaType Thick/Grosso: ""
+*nl.MediaType Thick/Dik: ""
+
+*MediaType Thick_Back/Thick (Back): "mark {
+	<</MediaType (Thick_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Thick_Back/Epais (Verso): ""
+*es.MediaType Thick_Back/Grueso (Detrás): ""
+*it.MediaType Thick_Back/Spesso (retro): ""
+*de.MediaType Thick_Back/Schwer (Rückseite): ""
+*pt.MediaType Thick_Back/Grosso (Verso): ""
+*nl.MediaType Thick_Back/Dik (Achter): ""
+
+*MediaType Extra_Thick/Extra Thick: "mark {
+	<</MediaType (Extra_Thick)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Extra_Thick/Très épais: ""
+*es.MediaType Extra_Thick/Extra Grueso: ""
+*it.MediaType Extra_Thick/ExtraSpessa: ""
+*de.MediaType Extra_Thick/Extraschwer: ""
+*pt.MediaType Extra_Thick/Mais Grosso: ""
+*nl.MediaType Extra_Thick/Extra dik: ""
+
+*MediaType Extra_Thick_Back/Extra Thick (Back): "mark {
+	<</MediaType (Extra_Thick_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Extra_Thick_Back/Très épais (Verso): ""
+*es.MediaType Extra_Thick_Back/Extra Grueso (Detrás): ""
+*it.MediaType Extra_Thick_Back/ExtraSpessa (retro): ""
+*de.MediaType Extra_Thick_Back/ExtraSchwer (Rückseite): ""
+*pt.MediaType Extra_Thick_Back/Mais Grosso (Verso): ""
+*nl.MediaType Extra_Thick_Back/Extra dik (Achter): ""
+
+*MediaType Super_Thick/Super Thick: "mark {
+	<</MediaType (Super_Thick)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Super_Thick/Super-épais: ""
+*es.MediaType Super_Thick/Super-grueso: ""
+*it.MediaType Super_Thick/Super-spessa: ""
+*de.MediaType Super_Thick/Super-dick: ""
+*pt.MediaType Super_Thick/Super-Espesso: ""
+*nl.MediaType Super_Thick/Superdik: ""
+
+*MediaType Super_Thick_Back/Super Thick (Back): "mark {
+	<</MediaType (Super_Thick_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Super_Thick_Back/Super-épais (Verso): ""
+*es.MediaType Super_Thick_Back/Super-grueso (Detrás): ""
+*it.MediaType Super_Thick_Back/Super-spessa (retro): ""
+*de.MediaType Super_Thick_Back/Super-dick (Rückseite): ""
+*pt.MediaType Super_Thick_Back/Super-Espesso (Verso): ""
+*nl.MediaType Super_Thick_Back/Superdik (Achter): ""
+
+*MediaType Thin/Thin: "mark {
+	<</MediaType (Thin)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Thin/Mince: ""
+*es.MediaType Thin/Fino: ""
+*it.MediaType Thin/Sottile: ""
+*de.MediaType Thin/Leicht: ""
+*pt.MediaType Thin/Fino: ""
+*nl.MediaType Thin/Thin: ""
+
+*MediaType Thin_Back/Thin (Back): "mark {
+	<</MediaType (Thin_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Thin_Back/Mince (Verso): ""
+*es.MediaType Thin_Back/Fino (Detrás): ""
+*it.MediaType Thin_Back/Sottile (retro): ""
+*de.MediaType Thin_Back/Leicht (Rückseite): ""
+*pt.MediaType Thin_Back/Fino (Verso): ""
+*nl.MediaType Thin_Back/Thin (Achter): ""
+
+*MediaType Envelope/Envelope: "mark {
+	<</MediaType (Envelope)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Envelope/Enveloppe: ""
+*es.MediaType Envelope/Sobre: ""
+*it.MediaType Envelope/Busta: ""
+*de.MediaType Envelope/Briefumschlag: ""
+*pt.MediaType Envelope/Envelope: ""
+*nl.MediaType Envelope/Enveloppe: ""
+
+*MediaType Special/Special: "mark {
+	<</MediaType (Special)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Special/Fond d'impression: ""
+*es.MediaType Special/Especial: ""
+*it.MediaType Special/Speciale: ""
+*de.MediaType Special/Spezial: ""
+*pt.MediaType Special/Especial: ""
+*nl.MediaType Special/Speciaal: ""
+
+*MediaType Special_Back/Special (Back): "mark {
+	<</MediaType (Special_Back)>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.MediaType Special_Back/Fond d'impression (Verso): ""
+*es.MediaType Special_Back/Especial (Detrás): ""
+*it.MediaType Special_Back/Speciale (retro): ""
+*de.MediaType Special_Back/Spezial (Rückseite): ""
+*pt.MediaType Special_Back/Especial (Verso): ""
+*nl.MediaType Special_Back/Speciaal (Achter): ""
+
+*?MediaType: "
+	save
+	currentpagedevice /MediaType get dup
+        null eq { pop (Plain) } if = flush
+	restore
+"
+*End
+*CloseUI: *MediaType
+*CloseGroup: EPQualitySettings
+
+
+
+*%************* Input Sources **************
+*% InputSlot must be before MediaType
+*% We need to ensure MediaType is set to 
+*% Plain or ManualFeed will fail setting
+*% to false. So reset here - WDS.
+
+*RequiresPageRegion All: True
+
+*OpenUI *InputSlot/InputSlot: PickOne
+*fr.Translation InputSlot/Source papier: ""
+*es.Translation InputSlot/Bandeja Entrada: ""
+*it.Translation InputSlot/Vassoio ingresso: ""
+*de.Translation InputSlot/Papierzufuhr: ""
+*pt.Translation InputSlot/Sistema Alim.: ""
+*nl.Translation InputSlot/Invoersleuf: ""
+
+*OrderDependency: 20 AnySetup *InputSlot
+*DefaultInputSlot: MSI
+*InputSlot MSI/MP Tray: "
+	mark {
+	<< /ManualFeed false /MediaPosition 0 >> setpagedevice
+	} stopped cleartomark
+"
+*End
+*fr.InputSlot MSI/Bac BM: ""
+*es.InputSlot MSI/Bandeja MF: ""
+*it.InputSlot MSI/Vassoio MF: ""
+*de.InputSlot MSI/MZ-Papierfach: ""
+*pt.InputSlot MSI/AAF MF: ""
+*nl.InputSlot MSI/MP-lade: ""
+
+*InputSlot LC1/Cassette 1: "
+	mark {
+	<< /ManualFeed false /MediaPosition 1 >> setpagedevice
+	} stopped cleartomark
+"
+*End
+*fr.InputSlot LC1/Inférieur 1: ""
+*es.InputSlot LC1/Bandeja 1: ""
+*it.InputSlot LC1/Cassetto 1: ""
+*de.InputSlot LC1/Zusatzpapiermagazin1: ""
+*pt.InputSlot LC1/AAF Inf. 1: ""
+*nl.InputSlot LC1/Cassette1: ""
+
+*InputSlot LC2/Cassette 2: "
+	mark {
+	<< /ManualFeed false /MediaPosition 2 >> setpagedevice
+	} stopped cleartomark
+"
+*End
+*fr.InputSlot LC2/Inférieur 2: ""
+*es.InputSlot LC2/Bandeja 2: ""
+*it.InputSlot LC2/Cassetto 2: ""
+*de.InputSlot LC2/Zusatzpapiermagazin2: ""
+*pt.InputSlot LC2/AAF Inf. 2: ""
+*nl.InputSlot LC2/Cassette2: ""
+
+*InputSlot LC3/Cassette 3: "
+	mark {
+	<< /ManualFeed false /MediaPosition 3 >> setpagedevice
+	} stopped cleartomark
+"
+*End
+*fr.InputSlot LC3/Inférieur 3: ""
+*es.InputSlot LC3/Bandeja 3: ""
+*it.InputSlot LC3/Cassetto 3: ""
+*de.InputSlot LC3/Zusatzpapiermagazin3: ""
+*pt.InputSlot LC3/AAF Inf. 3: ""
+*nl.InputSlot LC3/Cassette3: ""
+
+*?InputSlot: "
+	save
+	currentpagedevice dup /ManualFeed get
+	{pop (Manual)}	      
+	{
+	/MediaPosition get dup null eq {pop (Unknown)}
+	{[(MSI) (LC1) (LC2) (LC3)] exch get} ifelse
+	} ifelse = flush
+	restore
+	"
+*End
+*CloseUI: *InputSlot
+
+
+
+*%============ Be here as adviced ============
+*DefaultOutputOrder: Normal
+
+*OpenUI *Duplex/Duplex: PickOne
+*fr.Translation Duplex/Duplex (Recto Verso)": ""
+*es.Translation Duplex/Dúplex: ""
+*it.Translation Duplex/Duplex: ""
+*de.Translation Duplex/Duplex: ""
+*pt.Translation Duplex/Dúplex: ""
+*nl.Translation Duplex/Duplex: ""
+
+*DefaultDuplex: DuplexNoTumble
+*OrderDependency: 180 AnySetup *Duplex
+*Duplex None/Simplex: "<</Duplex false>> setpagedevice"
+*fr.Duplex None/Simplex: ""
+*es.Duplex None/Simple: ""
+*it.Duplex None/Simplex: ""
+*de.Duplex None/Simplex: ""
+*pt.Duplex None/Simples: ""
+*nl.Duplex None/Simplex: ""
+
+*Duplex DuplexTumble/Short Edge Binding: "
+	<</Duplex true /Tumble true>> setpagedevice
+"
+*End
+*fr.Duplex DuplexTumble/Reliure côté court: ""
+*es.Duplex DuplexTumble/Encuadernar lado corto: ""
+*it.Duplex DuplexTumble/Rilegatura lato corto: ""
+*de.Duplex DuplexTumble/Bindung kurze Seite: ""
+*pt.Duplex DuplexTumble/União Margem Curta: ""
+*nl.Duplex DuplexTumble/Korte zijde binden: ""
+
+*Duplex DuplexNoTumble/Long Edge Binding: "
+	<</Duplex true /Tumble false>> setpagedevice
+"
+*End
+*fr.Duplex DuplexNoTumble/Reliure côté long: ""
+*es.Duplex DuplexNoTumble/Encuadernar lado largo: ""
+*it.Duplex DuplexNoTumble/Rilegatura lato lungo: ""
+*de.Duplex DuplexNoTumble/Bindung lange Seite: ""
+*pt.Duplex DuplexNoTumble/União Margem Longa: ""
+*nl.Duplex DuplexNoTumble/Lange zijde binden: ""
+
+*?Duplex: "
+	save
+	currentpagedevice dup /Duplex 2 copy known
+	{get {/Tumble get {(DuplexTumble)}{(DuplexNoTumble)} ifelse}
+	{pop (None)} ifelse} {pop pop pop (None)}ifelse = flush
+	restore
+"
+*End
+*CloseUI: *Duplex
+
+
+
+*OpenUI *Collate/Collate: Boolean
+*fr.Translation Collate/Assemblage: ""
+*es.Translation Collate/Combinar: ""
+*it.Translation Collate/Fascicola: ""
+*de.Translation Collate/Sortieren: ""
+*pt.Translation Collate/Agrupar: ""
+*nl.Translation Collate/Sorteren: ""
+
+*DefaultCollate: False
+*OrderDependency: 170 AnySetup *Collate
+*Collate True/On: "<</Collate true>> setpagedevice"
+*fr.Collate True/Oui: ""
+*es.Collate True/Activado: ""
+*it.Collate True/On: ""
+*de.Collate True/Ein: ""
+*pt.Collate True/Sim: ""
+*nl.Collate True/Aan: ""
+
+*Collate False/Off: "<</Collate false>> setpagedevice"
+*fr.Collate False/Non: ""
+*es.Collate False/Desactivado: ""
+*it.Collate False/Off: ""
+*de.Collate False/Aus: ""
+*pt.Collate False/Não: ""
+*nl.Collate False/Uit: ""
+
+*?Collate: "
+	currentpagedevice /Collate get {(True)}{(False)}ifelse = flush
+"
+*End
+*CloseUI: *Collate
+
+
+
+*%********** Printer Features **************
+
+
+*%*************** Resolution options ***************
+*OpenGroup: EPQualitySettings/Quality
+*fr.Translation EPQualitySettings/Qualité: ""
+*es.Translation EPQualitySettings/ResoluciÓn: ""
+*it.Translation EPQualitySettings/Qualità: ""
+*de.Translation EPQualitySettings/Qualität: ""
+*pt.Translation EPQualitySettings/Resolução: ""
+*nl.Translation EPQualitySettings/Afdrukkwaliteit: ""
+
+*OpenUI *Resolution/Print Quality: PickOne
+*fr.Translation Resolution/Qualité d'impression: ""
+*es.Translation Resolution/Modo Gráfico: ""
+*it.Translation Resolution/Qualité: ""
+*de.Translation Resolution/Qualität: ""
+*pt.Translation Resolution/Modo Gráfico: ""
+*nl.Translation Resolution/Afdrukkwaliteit: ""
+
+*OrderDependency: 40 AnySetup *Resolution
+*DefaultResolution: 600dpi
+*Resolution 1200dpi/Maximum: "mark {
+	<<
+	   /DeviceRenderingInfo <</Type 29 /ValuesPerColorComponent 256>>
+	   /HWResolution [1200.0 1200.0]
+	>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.Resolution 1200dpi/Maximum: ""
+*es.Resolution 1200dpi/Máximo: ""
+*it.Resolution 1200dpi/Massimo: ""
+*de.Resolution 1200dpi/Maximal: ""
+*pt.Resolution 1200dpi/Máximo: ""
+*nl.Resolution 1200dpi/Maximale: ""
+
+*Resolution 600dpi/Fine: "mark {
+	<<
+	   /DeviceRenderingInfo <</Type 29 /ValuesPerColorComponent 256>>
+	   /HWResolution [600.0 600.0]
+	>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.Resolution 600dpi/Fin: ""
+*es.Resolution 600dpi/Fino: ""
+*it.Resolution 600dpi/Fine: ""
+*de.Resolution 600dpi/Fein: ""
+*pt.Resolution 600dpi/Óptima: ""
+*nl.Resolution 600dpi/Fijn: ""
+
+*Resolution 300dpi/Fast: "mark {
+	<<
+	   /DeviceRenderingInfo <</Type 29 /ValuesPerColorComponent 256>>
+	   /HWResolution [300.0 300.0]
+	>> setpagedevice
+	} stopped cleartomark"
+*End
+*fr.Resolution 300dpi/Rapide: ""
+*es.Resolution 300dpi/Rápida: ""
+*it.Resolution 300dpi/Alta: ""
+*de.Resolution 300dpi/Schnell: ""
+*pt.Resolution 300dpi/Rápida: ""
+*nl.Resolution 300dpi/Snel: ""
+
+*?Resolution: "
+	currentpagedevice /HWResolution get 0 get cvi
+	dup 300 eq
+	{ pop (300dpi) }
+        {600 eq { (600dpi) }{ (1200dpi) } ifelse} ifelse
+	= flush "
+*End
+*CloseUI: *Resolution
+*CloseGroup: EPQualitySettings
+
+
+
+
+
+
+*OpenGroup: EPOtherSettings/Others
+*fr.Translation EPOtherSettings/Autres: ""
+*es.Translation EPOtherSettings/Otros: ""
+*it.Translation EPOtherSettings/Altro: ""
+*de.Translation EPOtherSettings/Sonstiges: ""
+*pt.Translation EPOtherSettings/Outros: ""
+*nl.Translation EPOtherSettings/Overig: ""
+
+*OpenUI *EPToner/Toner Save Mode: Boolean
+*fr.Translation EPToner/Economie toner: ""
+*es.Translation EPToner/Ahorro Tóner: ""
+*it.Translation EPToner/Modo risparmio toner: ""
+*de.Translation EPToner/Tonersparmodus: ""
+*pt.Translation EPToner/Modo Económico: ""
+*nl.Translation EPToner/Tonerbesparing: ""
+
+*OrderDependency: 210 AnySetup *EPToner
+*DefaultEPToner: False
+*EPToner False/Off: "
+	mark {
+	<</PostRenderingEnhanceDetails <</Type 43 /TonerSaver 0>>>> setpagedevice
+	}stopped cleartomark"
+*End
+*fr.EPToner False/Non: ""
+*es.EPToner False/Desactivado: ""
+*it.EPToner False/Off: ""
+*de.EPToner False/Aus: ""
+*pt.EPToner False/Não: ""
+*nl.EPToner False/Uit: ""
+
+*EPToner True/On: "
+	mark {
+	<</PostRenderingEnhanceDetails <</Type 43 /TonerSaver 1>>>> setpagedevice
+	}stopped cleartomark"
+*End
+*fr.EPToner True/Oui: ""
+*es.EPToner True/Activado: ""
+*it.EPToner True/On: ""
+*de.EPToner True/Ein: ""
+*pt.EPToner True/Sim: ""
+*nl.EPToner True/Aan: ""
+
+*?EPToner: "
+	save
+	currentpagedevice /PostRenderingEnhanceDetails get
+	/TonerSaver get 1 eq {(True)}{(False)}ifelse = flush
+	restore
+"
+*End
+*CloseUI: *EPToner
+*CloseGroup: EPOtherSettings
+
+
+
+*OpenGroup: EPQualitySettings/Quality
+*fr.Translation EPQualitySettings/Qualité: ""
+*es.Translation EPQualitySettings/ResoluciÓn: ""
+*it.Translation EPQualitySettings/Qualità: ""
+*de.Translation EPQualitySettings/Qualität: ""
+*pt.Translation EPQualitySettings/Resolução: ""
+*nl.Translation EPQualitySettings/Afdrukkwaliteit: ""
+
+*OpenUI *EPRITech/RITech: Boolean
+*fr.Translation EPRITech/RITech: ""
+*es.Translation EPRITech/RITech: ""
+*it.Translation EPRITech/RITech: ""
+*de.Translation EPRITech/RITech: ""
+*pt.Translation EPRITech/RITech: ""
+*nl.Translation EPRITech/RITech: ""
+*OrderDependency: 200 AnySetup *EPRITech
+*DefaultEPRITech: True
+*EPRITech False/Off: "
+	mark {
+	<< /PostRenderingEnhanceDetails <</Type 43 /REValue 0>> >> setpagedevice
+	}stopped cleartomark"
+*End
+*fr.EPRITech False/Non: ""
+*es.EPRITech False/Desactivado: ""
+*it.EPRITech False/Off: ""
+*de.EPRITech False/Aus: ""
+*pt.EPRITech False/Não: ""
+*nl.EPRITech False/Uit: ""
+
+*EPRITech True/On: "
+	mark {
+	<< /PostRenderingEnhanceDetails <</Type 43 /REValue 1>> >> setpagedevice
+	}stopped cleartomark"
+*End
+*fr.EPRITech True/Oui: ""
+*es.EPRITech True/Activado: ""
+*it.EPRITech True/On: ""
+*de.EPRITech True/Ein: ""
+*pt.EPRITech True/Sim: ""
+*nl.EPRITech True/Aan: ""
+*?EPRITech: "
+	save
+	currentpagedevice /PostRenderingEnhanceDetails get
+	/REValue get 1 eq {(True)}{(False)}ifelse = flush
+	restore
+"
+*End
+*CloseUI: *EPRITech
+*CloseGroup: EPQualitySettings
+
+
+*OpenGroup: EPQualitySettings/Quality
+*fr.Translation EPQualitySettings/Qualité: ""
+*es.Translation EPQualitySettings/ResoluciÓn: ""
+*it.Translation EPQualitySettings/Qualità: ""
+*de.Translation EPQualitySettings/Qualität: ""
+*pt.Translation EPQualitySettings/Resolução: ""
+*nl.Translation EPQualitySettings/Afdrukkwaliteit: ""
+
+*OpenUI *EPDensity/Density: PickOne
+*fr.Translation EPDensity/Densité: ""
+*es.Translation EPDensity/Densidad: ""
+*it.Translation EPDensity/Densità: ""
+*de.Translation EPDensity/Dichte: ""
+*pt.Translation EPDensity/Densidade: ""
+*nl.Translation EPDensity/Dichtheid: ""
+
+*DefaultEPDensity: DMedium
+*OrderDependency: 140 AnySetup *EPDensity
+*EPDensity DLightest/Lightest: "
+	<</DeviceRenderingInfo <</Type 29 /Density 1>> >>
+	setpagedevice"
+*End
+*fr.EPDensity DLightest/Plus claire: ""
+*es.EPDensity DLightest/Muy clara: ""
+*it.EPDensity DLightest/Chiarissima: ""
+*de.EPDensity DLightest/Sehr hell: ""
+*pt.EPDensity DLightest/Mais clara: ""
+*nl.EPDensity DLightest/Lichtst: ""
+
+*EPDensity DLight/Light: "
+	<</DeviceRenderingInfo <</Type 29 /Density 2>> >>
+	setpagedevice"
+*End
+*fr.EPDensity DLight/Claire: ""
+*es.EPDensity DLight/Clara: ""
+*it.EPDensity DLight/Chiara: ""
+*de.EPDensity DLight/Mittelhell: ""
+*pt.EPDensity DLight/Clara: ""
+*nl.EPDensity DLight/Licht: ""
+
+*EPDensity DMedium/Medium: "
+	<</DeviceRenderingInfo <</Type 29 /Density 3>> >>
+	setpagedevice"
+*End
+*fr.EPDensity DMedium/Moyenne: ""
+*es.EPDensity DMedium/Media: ""
+*it.EPDensity DMedium/Media: ""
+*de.EPDensity DMedium/Standard: ""
+*pt.EPDensity DMedium/Média: ""
+*nl.EPDensity DMedium/Normaal: ""
+
+*EPDensity DDark/Dark: "
+	<</DeviceRenderingInfo <</Type 29 /Density 4>> >>
+	setpagedevice"
+*End
+*fr.EPDensity DDark/Foncée: ""
+*es.EPDensity DDark/Oscura: ""
+*it.EPDensity DDark/Scura: ""
+*de.EPDensity DDark/Mitteldunkel: ""
+*pt.EPDensity DDark/Escura: ""
+*nl.EPDensity DDark/Donker: ""
+
+*EPDensity DDarkest/Darkest: "
+	<</DeviceRenderingInfo <</Type 29 /Density 5>> >>
+	setpagedevice"
+*End
+*fr.EPDensity DDarkest/Plus foncée: ""
+*es.EPDensity DDarkest/Muy oscura: ""
+*it.EPDensity DDarkest/Scurissima: ""
+*de.EPDensity DDarkest/Sehr dunkel: ""
+*pt.EPDensity DDarkest/Mais escura: ""
+*nl.EPDensity DDarkest/Donkerst: ""
+
+*?EPDensity: "
+	save
+	[/DLightest /DLight /DMedium /DDark /DDarkest]
+	currentpagedevice /DeviceRenderingInfo get /Density get dup 0 gt
+	{dup 6 lt {get}{pop pop (DMedium)}ifelse} {pop pop (DMedium)} ifelse = flush
+	restore
+"
+*End
+*CloseUI: *EPDensity
+*CloseGroup: EPQualitySettings
+
+
+*OpenGroup: EPOutputSettings/Output
+*fr.Translation EPOutputSettings/Paramètre Sortie: ""
+*es.Translation EPOutputSettings/Ajuste de salida: ""
+*it.Translation EPOutputSettings/Impostazione output: ""
+*de.Translation EPOutputSettings/Ausgabeeinstellung: ""
+*pt.Translation EPOutputSettings/Definição de Saída: ""
+*nl.Translation EPOutputSettings/Uitvoerinstelling: ""
+
+*OpenUI *EPRotate90Degrees/Output Direction: PickOne
+*fr.Translation EPRotate90Degrees/Sens d'impression: ""
+*es.Translation EPRotate90Degrees/Dirección de salida: ""
+*it.Translation EPRotate90Degrees/Direzione uscita: ""
+*de.Translation EPRotate90Degrees/Ausgabeausrichtung: ""
+*pt.Translation EPRotate90Degrees/Direcção de Saída: ""
+*nl.Translation EPRotate90Degrees/Uitvoerrichting: ""
+
+*DefaultEPRotate90Degrees: Off
+*OrderDependency: 230 AnySetup *EPRotate90Degrees
+*EPRotate90Degrees Off/Unspecified: "
+	<</PageFeedEdge true >> setpagedevice"
+*End
+*fr.EPRotate90Degrees Off/Non spécifié: ""
+*es.EPRotate90Degrees Off/Sin especificar: ""
+*it.EPRotate90Degrees Off/Non specificato: ""
+*de.EPRotate90Degrees Off/Undefiniert: ""
+*pt.EPRotate90Degrees Off/Não especificado: ""
+*nl.EPRotate90Degrees Off/Onbepaald: ""
+
+*EPRotate90Degrees Rotate0/Standard: "
+	<</PageFeedEdge true >> setpagedevice"
+*End
+*fr.EPRotate90Degrees Rotate0/Standard: ""
+*es.EPRotate90Degrees Rotate0/Estándar: ""
+*it.EPRotate90Degrees Rotate0/Standard: ""
+*de.EPRotate90Degrees Rotate0/Standard: ""
+*pt.EPRotate90Degrees Rotate0/Normal: ""
+*nl.EPRotate90Degrees Rotate0/Standaard: ""
+
+*EPRotate90Degrees Rotate90/Non-standard: "
+	<</PageFeedEdge false >> setpagedevice"
+*End
+*fr.EPRotate90Degrees Rotate90/Non standard: ""
+*es.EPRotate90Degrees Rotate90/No estándar: ""
+*it.EPRotate90Degrees Rotate90/Non standard: ""
+*de.EPRotate90Degrees Rotate90/Nichtstandard: ""
+*pt.EPRotate90Degrees Rotate90/Não Padrão: ""
+*nl.EPRotate90Degrees Rotate90/Niet-standaard: ""
+
+*CloseUI: *EPRotate90Degrees
+*CloseGroup: EPOutputSettings
+
+
+
+*%************** Font Information ***************
+
+*DefaultFont: Courier
+*Font Courier: Standard "(004.000)" Standard Disk
+*Font Courier-Bold: Standard "(004.000)" Standard Disk
+*Font Courier-BoldOblique: Standard "(004.000)" Standard Disk
+*Font Courier-Oblique: Standard "(004.000)" Standard Disk
+
+*% Printer Messages (verbatim from printer):
+*Message: "%%[ exitserver: permanent state may be changed ]%%"
+*Message: "%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%"
+*Message: "\FontName\ not found, using Courier"
+
+*% Printer Error (format: %%[ PrinterError: <one of these> ]%%)
+*%PrinterError: "cover open"
+*%PrinterError: "cassette open"
+
+
+
+*% Status (format: %%[ status: <one of these> ] %%) 
+*Status: "idle"
+*Status: "processing"
+*Status: "printing"
+*%Status: "PrinterError: cover open"
+*%Status: "PrinterError: cassette open"
+
+
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% ) 
+*Source: "Ethernet"
+*Source: "USB"
+
+
+
+*DefaultColorSep: ProcessBlack.134lpi.300x300dpi
+
+*ColorSepScreenAngle ProcessCyan.106lpi.300x300dpi/106 lpi / 300 dpi: "45"
+*ColorSepScreenAngle ProcessMagenta.134lpi.300x300dpi/134 lpi / 300 dpi: "26"
+*ColorSepScreenAngle ProcessYellow.150lpi.300x300dpi/150 lpi / 300 dpi: "0"
+*ColorSepScreenAngle ProcessBlack.134lpi.300x300dpi/134 lpi / 300 dpi: "63"
+*ColorSepScreenAngle ProcessRed.134lpi.300x300dpi/134 lpi / 300 dpi: "63"
+*ColorSepScreenAngle ProcessGreen.134lpi.300x300dpi/134 lpi / 300 dpi: "63"
+*ColorSepScreenAngle ProcessBlue.134lpi.300x300dpi/134 lpi / 300 dpi: "63"
+
+*ColorSepScreenFreq  ProcessCyan.106lpi.300x300dpi/106 lpi / 300 dpi: "106"
+*ColorSepScreenFreq  ProcessMagenta.134lpi.300x300dpi/134 lpi / 300 dpi: "134"
+*ColorSepScreenFreq  ProcessYellow.150lpi.300x300dpi/150 lpi / 300 dpi: "150"
+*ColorSepScreenFreq  ProcessBlack.134lpi.300x300dpi/134 lpi / 300 dpi: "134"
+*ColorSepScreenFreq  ProcessRed.134lpi.300x300dpi/134 lpi / 300 dpi: "134"
+*ColorSepScreenFreq  ProcessGreen.134lpi.300x300dpi/134 lpi / 300 dpi: "134"
+*ColorSepScreenFreq  ProcessBlue.134lpi.300x300dpi/134 lpi / 300 dpi: "134"
+
+*ColorSepScreenAngle ProcessCyan.141lpi.600x600dpi/141 lpi / 600 dpi: "45"
+*ColorSepScreenAngle ProcessMagenta.145lpi.600x600dpi/145 lpi / 600 dpi: "14"
+*ColorSepScreenAngle ProcessYellow.150lpi.600x600dpi/150 lpi / 600 dpi: "0"
+*ColorSepScreenAngle ProcessBlack.145lpi.600x600dpi/145 lpi / 600 dpi: "75"
+*ColorSepScreenAngle ProcessRed.145lpi.600x600dpi/145 lpi / 600 dpi: "75"
+*ColorSepScreenAngle ProcessGreen.145lpi.600x600dpi/145 lpi / 600 dpi: "75"
+*ColorSepScreenAngle ProcessBlue.145lpi.600x600dpi/145 lpi / 600 dpi: "75"
+
+*ColorSepScreenFreq  ProcessCyan.141lpi.600x600dpi/141 lpi / 600 dpi: "141"
+*ColorSepScreenFreq  ProcessMagenta.145lpi.600x600dpi/145 lpi / 600 dpi: "145"
+*ColorSepScreenFreq  ProcessYellow.150lpi.600x600dpi/150 lpi / 600 dpi: "150"
+*ColorSepScreenFreq  ProcessBlack.145lpi.600x600dpi/145 lpi / 600 dpi: "145"
+*ColorSepScreenFreq  ProcessRed.145lpi.600x600dpi/145 lpi / 600 dpi: "145"
+*ColorSepScreenFreq  ProcessGreen.145lpi.600x600dpi/145 lpi / 600 dpi: "145"
+*ColorSepScreenFreq  ProcessBlue.145lpi.600x600dpi/145 lpi / 600 dpi: "145"
+
+

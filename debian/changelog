@@ -1,0 +1,11 @@
+hamonikr-printer-drivers (1.0.1) jin; urgency=medium
+
+  * Add DocuPrint-CM225 printer
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 16 Nov 2020 18:07:14 +0900
+
+hamonikr-printer-drivers (1.0.0) jin; urgency=medium
+
+  * Add popular printer drivers
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 16 Nov 2020 17:31:09 +0900

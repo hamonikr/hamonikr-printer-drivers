@@ -1,0 +1,944 @@
+*PPD-Adobe: "4.3"
+*%-------------------------------------------------------------------------
+*% Version Section
+*%-------------------------------------------------------------------------
+*FileVersion: "1.4"
+*FormatVersion: "4.3"
+*LanguageEncoding: ISOLatin2
+*LanguageVersion: Korean
+*Manufacturer: "Fuji Xerox"
+*PCFileName: "fxtpp4a.PPD"
+*Product: "(DocuPrint CM225 w)"
+*PSVersion: "(3018.102) 1"
+*ShortNickName: "FX DocuPrint CM225 w PS"
+*ModelName: "FX DocuPrint CM225 w PS"
+*NickName: "FX DocuPrint CM225 w PS"
+
+*%-------------------------------------------------------------------------
+*% === Options and Constraints =========
+*%-------------------------------------------------------------------------
+
+*%-------------------------------------------------------------------------
+*% ==== Device Capabilities ===============
+*%-------------------------------------------------------------------------
+*LanguageLevel: "3"
+*Protocols: TBCP
+*1284Modes Parallel: Compat Nibble ECP
+*1284DeviceID: "MFG:FUJI XEROX;CMD:PJL,RASTER,DOWNLOAD,PCLXL,PCL,POSTSCRIPT;MDL:DocuPrint CM225 w PS;DES:FX DocuPrint CM225 w PS;CLS:PRINTER;"
+
+*FreeVM: "11140352"
+*VMOption 256Meg/Standard 256MB: "11140352"
+*VMOption 512Meg/512MB: "11140352"
+*VMOption 768Meg/768MB: "11140352"
+*VMOption 1280Meg/1280MB: "11140352"
+
+*ColorDevice: True
+*DefaultColorSpace: CMYK
+*VariablePaperSize: True
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*?TTRasterizer: "
+   save
+      42 /FontType resourcestatus
+    {pop pop (Type42)}{(No Type42)} ifelse = flush
+   restore
+"
+*End
+*FileSystem: True
+*?FileSystem: "
+  save false
+   (%disk?%)
+   { currentdevparams dup /Writeable known
+      { /Writeable get {pop true} if }  { pop } ifelse
+    } 10 string /IODevice resourceforall
+    {(True)}{(False)} ifelse = flush
+ restore
+"
+*End
+
+*Throughput: "23"
+*Password: "()"
+*ExitServer: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+     (WARNING: Cannot modify initial VM.) =
+     (Missing or invalid password.) =
+     (Please contact the author of this software.) = flush quit
+     } if
+"
+*End
+*Reset: "
+ count 0 eq
+ { false } { true exch startjob } ifelse
+ not {
+    (WARNING: Cannot reset printer.) =
+    (Missing or invalid password.) =
+    (Please contact the author of this software.) = flush quit
+    } if
+ systemdict /quit get exec
+ (WARNING : Printer Reset Failed.) = flush
+"
+*End
+
+*DefaultResolution: 600dpi
+*?Resolution: "
+save
+    currentpagedevice /HWResolution get dup aload pop eq
+    {0 get cvi 9 string cvs print}
+    {aload pop exch cvi 9 string cvs print (x) print cvi 9 string cvs print}
+    ifelse (dpi) =
+restore
+"
+*End
+
+*AccurateScreensSupport: True
+*SuggestedJobTimeout: "0"
+*SuggestedWaitTimeout: "300"
+*PrintPSErrors: True
+
+*%-------------------------------------------------------------------------
+*% Resolution
+*%-------------------------------------------------------------------------
+
+*%OpenUI *ImageQuality/Image Quality: PickOne
+*%OrderDependency: 10.0 AnySetup *ImageQuality
+*%DefaultImageQuality: Standard
+*%ImageQuality Standard/Standard: "
+*%    2 dict dup /HWResolution [600 600] put
+*%    dup 2 dict dup /Type 26 put dup /ValuesPerColorComponent 2 put
+*%    /DeviceRenderingInfo exch put
+*%    setpagedevice
+*%"
+*%End
+*%ImageQuality HighResolution/High Resolution: "
+*%    2 dict dup /HWResolution [1200 1200] put
+*%    dup 2 dict dup /Type 26 put dup /ValuesPerColorComponent 16 put
+*%    /DeviceRenderingInfo exch put
+*%    setpagedevice
+*%"
+*%End
+*%?ImageQuality: "
+*%"
+*%End
+*%CloseUI: *ImageQuality
+
+
+*%-------------------------------------------------------------------------
+*% Halftone Information ===============
+*%-------------------------------------------------------------------------
+
+*DefaultHalftoneType: 5
+*ScreenFreq: "141.0"
+*ScreenAngle: "45.0"
+*DefaultScreenProc: Dot
+*ScreenProc Dot: "{180 mul cos exch 180 mul cos add 2 div} bind"
+*ScreenProc Line: "{ pop }"
+*ScreenProc Ellipse: "{ dup 5 mul 8 div mul exch dup mul exch add sqrt 1 exch sub }"
+*DefaultTransfer: Null
+*Transfer Null: "{ }"
+*Transfer Null.Inverse: "{ 1 exch sub }"
+
+
+*% InputSlot Information ================
+*RequiresPageRegion 1stTray: True
+*OpenUI *InputSlot/Paper Tray: PickOne
+*OrderDependency: 55.0 AnySetup *InputSlot
+*DefaultInputSlot: 1stTray
+*InputSlot 1stTray/Auto: "
+  currentpagedevice /InputAttributes get dup 0 known
+  {0 get dup null eq
+   { pop }
+   { dup length 4 add dict copy
+     dup /DeferredMediaSelection true put
+     dup /MediaPosition 0 put
+     dup /TraySwitch false put
+     dup /ManualFeed false put
+     setpagedevice
+   } ifelse }
+  {pop}
+  ifelse
+"
+*End
+*?InputSlot: ""
+*CloseUI: *InputSlot
+
+*%=================================================
+*% Duplex information
+*%=================================================
+*%OpenUI *Duplex/2-Sided Print:  PickOne
+*%OrderDependency: 110.0 AnySetup *Duplex
+*%DefaultDuplex: DuplexNoTumble
+*%Duplex None/1-Sided Print: "
+*%    1 dict
+*%    dup /Duplex false put
+*%    setpagedevice
+*%"
+*%End
+*%Duplex DuplexTumble/Flip on Short edge: "
+*%    userdict /$$OEMPreConfigDict known {
+*%        userdict /$$OEMPreConfigDict get /Duplex 2 copy known {
+*%            get exec false
+*%        }{
+*%            pop pop true
+*%        } ifelse
+*%    }{
+*%        true
+*%    } ifelse
+*%    {
+*%    2 dict dup /Duplex true put
+*%    dup /Tumble true put setpagedevice
+*%    } if
+*%"
+*%End
+*%Duplex DuplexNoTumble/Flip on Long edge: "
+*%    userdict /$$OEMPreConfigDict known {
+*%       userdict /$$OEMPreConfigDict get /Duplex 2 copy known {
+*%            get exec false
+*%        }{
+*%            pop pop true
+*%        } ifelse
+*%    }{
+*%        true
+*%    } ifelse
+*%    {
+*%    2 dict dup /Duplex true put
+*%    dup /Tumble false put setpagedevice
+*%    } if
+*%"
+*%End
+*%?Duplex: "
+*%save
+*%   currentpagedevice /Duplex known
+*%   { currentpagedevice /Duplex get
+*%       { currentpagedevice /Tumble get
+*%          {(DuplexTumble)}{(DuplexNoTumble)}ifelse
+*%       }
+*%       { (None) } ifelse
+*%   }
+*%   { (None)}
+*%   ifelse = flush
+*%restore
+*%"
+*%End
+*%CloseUI: *Duplex
+
+*%=================================================
+*% Paper Handling 
+*%=================================================
+*OpenUI *PageSize: PickOne
+*OrderDependency: 60.0 AnySetup *PageSize
+*DefaultPageSize: Letter
+*PageSize A4/A4 (210 x 297mm): "
+    6 dict dup /PageSize [595 842] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+" 
+*End
+*PageSize B5/B5 (182 x 257mm): "
+    6 dict dup /PageSize [516 729] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize A5/A5 (148 x 210mm): "
+    6 dict dup /PageSize [420 595] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize ENV_C5/C5 (162 x 229mm): "
+     6 dict dup /PageSize [459 649] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize ENV_MONARCH/Monarch (3.875 x 7.5"): "
+    6 dict dup /PageSize [279 540] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize ENV_10/Com10 (4.125 x 9.5"): "
+    6 dict dup /PageSize [297 684] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize ENV_DL/DL (110 x 220mm): "
+    6 dict dup /PageSize [312 624] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize Letter/Letter (8.5 x 11"): "
+    6 dict dup /PageSize [612 792] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize LEGAL/Legal (8.5 x 14"): "
+    6 dict dup /PageSize [612 1008] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize FOLIO/Folio (8.5 x 13"): "
+    6 dict dup /PageSize [612 936] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageSize EXECUTIVE/Executive (7.25 x 10.5"): "
+    6 dict dup /PageSize [522 756] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*?PageSize: "
+  save
+   currentpagedevice /PageSize get aload pop
+   2 copy gt {exch} if
+   (Unknown)
+   11 dict
+   dup [595 842]    (A4) put
+   dup [516 729]    (B5) put
+   dup [420 595]    (A5) put
+   dup [459 649]    (ENV_C5) put
+   dup [279 540]    (ENV_MONARCH) put 
+   dup [297 684]    (ENV_10) put
+   dup [312 624]    (ENV_DL) put   
+   dup [612 792]    (Letter) put
+   dup [612 1008]   (LEGAL) put
+   dup [612 936]    (FOLIO) put
+   dup [522 756]    (EXECUTIVE) put
+   { exch aload pop 4 index sub abs 5 le exch
+   5 index sub abs 5 le and
+      {exch pop exit} {pop} ifelse
+   } bind forall
+   = flush pop pop
+   restore
+"
+*End
+*CloseUI: *PageSize
+*%=================================================
+*% Page Region 
+*%=================================================
+*OpenUI *PageRegion:  PickOne
+*OrderDependency: 80.0 AnySetup *PageRegion
+*DefaultPageRegion: Letter
+*%  Addition of Unsupported Papers ends here
+*PageRegion A4/A4 (210 x 297mm): "
+    6 dict dup /PageSize [595 842] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+" 
+*End
+*%  Addition of Unsupported Papers ends here
+*PageRegion B5/B5 (182 x 257mm): "
+    6 dict dup /PageSize [516 729] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion A5/A5 (148 x 210mm): "
+    6 dict dup /PageSize [420 595] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion ENV_C5/C5 (162 x 229mm): "
+     6 dict dup /PageSize [459 649] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion ENV_MONARCH/Monarch (3.875 x 7.5"): "
+    6 dict dup /PageSize [279 540] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion ENV_10/Com10 (4.125 x 9.5"): "
+    6 dict dup /PageSize [297 684] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion ENV_DL/DL (110 x 220mm): "
+    6 dict dup /PageSize [312 624] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion Letter/Letter (8.5 x 11"): "
+    6 dict dup /PageSize [612 792] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion LEGAL/Legal (8.5 x 14"):: "
+    6 dict dup /PageSize [612 1008] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion FOLIO/Folio (8.5 x 13"): "
+    6 dict dup /PageSize [612 936] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*PageRegion EXECUTIVE/Executive (7.25 x 10.5"): "
+    6 dict dup /PageSize [522 756] put dup /ImagingBBox null put
+    dup /LeadingEdge null put
+    dup /MediaClass null put currentpagedevice
+    dup /MediaPosition get null eq
+    {/Policies 2 copy known
+      {get /PageSize 2 copy known
+        {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+        {pop pop} ifelse
+      }{pop pop} ifelse
+    }{pop} ifelse setpagedevice
+"
+*End
+*CloseUI: *PageRegion
+*%=================================================
+*% Imageable Area ===================================
+*%=================================================
+*% The following entries provide information about specific paper keywords.
+*DefaultImageableArea: Letter
+*ImageableArea A4/A4 (210 x 297mm):                                                      "11.62 11.62 583.65 830.27"
+*ImageableArea B5/B5 (182 x 257mm):                                                "11.62 11.62 504.28 716.88"
+*ImageableArea A5/A5 (148 x 210mm):                                                      "11.62 11.62 407.91 583.65"
+*ImageableArea ENV_C5/C5 (162 x 229mm):                                         "11.62 11.62 447.59 637.51"
+*ImageableArea ENV_MONARCH/Monarch (3.875 x 7.5"):                               "11.62 11.62 267.38 528.38"
+*ImageableArea ENV_10/Com10 (4.125 x 9.5"):                                        "11.62 11.62 283.86 672.66"
+*ImageableArea ENV_DL/DL (110 x 220mm):                                         "11.62 11.62 300.19 612.00"
+*ImageableArea Letter/Letter (8.5 x 11"):                                              "11.62 11.62 600.38 780.38"
+*ImageableArea LEGAL/Legal (8.5 x 14"):                                                "11.62 11.62 600.38 996.38"
+*ImageableArea FOLIO/Folio (8.5 x 13"):                                          			 "11.62 11.62 600.38 924.38"
+*ImageableArea EXECUTIVE/Executive (7.25 x 10.5"):                                        "11.62 11.62 510.38 744.38"
+*?ImageableArea: "
+   save
+   3 dict begin
+   /cvp { (                ) cvs print ( ) print } bind def
+   /upperright {10000 mul floor 10000 div} bind def
+   /lowerleft {10000 mul ceiling 10000 div} bind def
+   newpath clippath pathbbox
+   4 -2 roll exch 2 {lowerleft cvp} repeat
+   exch 2 {upperright cvp} repeat (\n) print flush
+   end
+   restore
+"
+*End
+*%=================================================
+*% Paper Dimension ================================
+*%=================================================
+*% These provide the physical dimensions of the paper (by keyword)
+*DefaultPaperDimension: Letter
+*PaperDimension A4/A4 (210 x 297mm):                                                     "595 842"
+*PaperDimension B5/B5 (182 x 257mm):                                               "516 729"
+*PaperDimension A5/A5 (148 x 210mm):                                                     "420 595"
+*PaperDimension ENV_C5/C5 (162 x 229mm):                                        "459 649"
+*PaperDimension ENV_MONARCH/Monarch (3.875 x 7.5"):                              "279 540"
+*PaperDimension ENV_10/Com10 (4.125 x 9.5"):                                       "297 684"
+*PaperDimension ENV_DL/DL (110 x 220mm):                                        "312 624"
+*PaperDimension Letter/Letter (8.5 x 11"):                                             "612 792"
+*PaperDimension LEGAL/Legal (8.5 x 14"):                                         			 "612 1008"
+*PaperDimension FOLIO/Folio (8.5 x 13"):                                         			 "612 936"
+*PaperDimension EXECUTIVE/Executive (7.25 x 10.5"):                                       "522 756"
+*%=================================================
+*% Custom Paper Size==============================
+*%=================================================
+*% min: 216 pts x 360 pts   (76.2mm * 127mm)
+*% max: 612 pts x 1008 pts  (8.5 inch * 14.00 inch)
+*HWMargins: 12 12 12 12
+*LeadingEdge Short: ""
+*DefaultLeadingEdge: Short
+*MaxMediaWidth: "612"
+*MaxMediaHeight: "1008"
+*NonUIOrderDependency: 80.0 AnySetup *CustomPageSize
+*CustomPageSize True: "
+5 dict dup /LeadingEdge null put
+dup /MediaType (Custom) put 
+dup /MediaClass null put currentpagedevice
+dup /MediaPosition get null eq
+{/Policies 2 copy known
+  {get /PageSize 2 copy known
+    {get dup 3 ge exch 6 le and {dup /DeferredMediaSelection false put} if}
+    {pop pop} ifelse
+  }{pop pop} ifelse
+}{pop} ifelse setpagedevice
+userdict /4.3PPDCompliant known
+    {userdict /4.3PPDCompliant get } {false} ifelse
+{ % From Print Managers complying with 4.3 PPD Spec.
+  pop pop pop % discard orientation & offsets
+  3 dict begin
+    /PageSize [
+      4 -2 roll
+    ] def
+  /ImagingBBox null def
+  currentdict end setpagedevice
+}{ % From Print Managers not complying with 4.3 PPD Spec.
+  pop pop pop % discard orientation & offsets
+  3 dict begin
+    /PageSize [
+      4 -2 roll exch
+    ] def
+  /ImagingBBox null def
+  currentdict end setpagedevice
+} ifelse
+"
+*End
+*ParamCustomPageSize Height:       1 points 360 1008
+*ParamCustomPageSize Width:        2 points 216 612
+*ParamCustomPageSize WidthOffset:  3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation:  5 int 1 1
+
+
+*% Collate ===============
+*OpenUI *Collate/Collated: Boolean
+*OrderDependency: 15.0 AnySetup *Collate
+*DefaultCollate: False
+*Collate False/Off: "
+        1  dict dup /Collate false put setpagedevice"
+*End
+*Collate True/On: "
+        1  dict dup /Collate true put setpagedevice"
+*End
+*?Collate: "
+  save
+    currentpagedevice /Collate get
+    {(True)} {(False)} ifelse
+    = flush
+  restore
+"
+*End
+*CloseUI: *Collate
+
+*% MediaType ===============
+*OpenUI *MediaType/Paper Type:  PickOne
+*OrderDependency: 90.0 AnySetup *MediaType
+*DefaultMediaType: Plain
+*MediaType Plain/�������: "1 dict dup /MediaClass (Plain) put setpagedevice"
+*MediaType Bond/���� �����: "1 dict dup /MediaClass (Bond) put setpagedevice"
+*MediaType Covers/�߷��� 1: "1 dict dup /MediaClass (Covers) put setpagedevice"
+*MediaType Coated/���ÿ���: "1 dict dup /MediaClass (Coated) put setpagedevice"
+*MediaType Envelope/����: "1 dict dup /MediaClass (Envelope) put setpagedevice"
+*MediaType Labels/�󺧿���: "1 dict dup /MediaClass (Labels) put setpagedevice"
+*MediaType Recycled/�������: "1 dict dup /MediaClass (Recycled) put setpagedevice"
+*MediaType PlainSide/������� - �޸�: "1 dict dup /MediaClass (PlainSide) put setpagedevice"
+*MediaType BondSide/���� ����� - �޸�: "1 dict dup /MediaClass (BondSide) put setpagedevice"
+*MediaType CoversSide/�߷��� 1 - �޸�: "1 dict dup /MediaClass (CoversSide) put setpagedevice"
+*MediaType CoatedSide/���ÿ��� - �޸�: "1 dict dup /MediaClass (CoatedSide) put setpagedevice"
+*MediaType RecycledSide/������� - �޸�: "1 dict dup /MediaClass (RecycledSide) put setpagedevice"
+*?MediaType: "
+save
+    currentpagedevice /MediaClass get dup null eq {pop (Plain1)}
+    {dup (Plain) eq {pop (Plain)}
+     {dup (Bond) eq {pop (Bond)}
+     {dup (Covers) eq {pop (Covers)}
+     {dup (Coated) eq {pop (Coated)}
+     {dup (Envelope) eq {pop (Envelope)}
+     {dup (Labels) eq {pop (Labels)}
+     {dup (Recycled) eq {pop (Recycled)}
+     {dup (PlainSide) eq {pop (PlainSide)}
+     {dup (BondSide) eq {pop (BondSide)}
+     {dup (CoversSide) eq {pop (CoversSide)}
+     {dup (CoatedSide) eq {pop (CoatedSide)}
+     {dup (RecycledSide) eq {pop (RecycledSide)}
+                {(Unknown)} ifelse
+               } ifelse
+     } ifelse
+*%    } ifelse
+   = flush
+restore
+"
+*End
+*CloseUI: *MediaType
+*% Font Information =====================
+
+*FCacheSize 256Meg: 1258291
+*FCacheSize 512Meg: 1258291
+*FCacheSize 768Meg: 1258291
+*FCacheSize 1280Meg: 1258291
+
+*DefaultFont: Courier
+
+*Font AlbertusMT-Italic: Standard "(001.001)" Standard ROM 
+*Font AlbertusMT-Light: Standard "(001.001)" Standard ROM 
+*Font AlbertusMT: Standard "(001.001)" Standard ROM 
+*Font AntiqueOlive-Bold: Standard "(001.002)" Standard ROM 
+*Font AntiqueOlive-Compact: Standard "(001.002)" Standard ROM 
+*Font AntiqueOlive-Italic: Standard "(001.002)" Standard ROM 
+*Font AntiqueOlive-Roman: Standard "(001.002)" Standard ROM 
+*Font Apple-Chancery: Standard "(001.002)" ExtendedRoman ROM 
+*Font Arial-BoldItalicMT: Standard "(001.003)" Standard ROM 
+*Font Arial-BoldMT: Standard "(001.003)" Standard ROM 
+*Font Arial-ItalicMT: Standard "(001.003)" Standard ROM 
+*Font ArialMT: Standard "(001.003)" Standard ROM 
+*Font AvantGarde-Book: Standard "(003.000)" Standard ROM 
+*Font AvantGarde-BookOblique: Standard "(003.000)" Standard ROM 
+*Font AvantGarde-Demi: Standard "(003.000)" Standard ROM 
+*Font AvantGarde-DemiOblique: Standard "(003.000)" Standard ROM 
+*Font Bodoni-Bold: Standard "(001.003)" Standard ROM 
+*Font Bodoni-BoldItalic: Standard "(001.003)" Standard ROM 
+*Font Bodoni-Italic: Standard "(001.003)" Standard ROM 
+*Font Bodoni-Poster: Standard "(001.003)" Standard ROM 
+*Font Bodoni-PosterCompressed: Standard "(001.002)" Standard ROM 
+*Font Bodoni: Standard "(001.003)" Standard ROM 
+*Font Bookman-Demi: Standard "(003.000)" Standard ROM 
+*Font Bookman-DemiItalic: Standard "(003.000)" Standard ROM 
+*Font Bookman-Light: Standard "(003.000)" Standard ROM 
+*Font Bookman-LightItalic: Standard "(003.000)" Standard ROM 
+*Font Carta: Special "(001.001)" Special ROM 
+*Font Chicago: Standard "(001.000)" ExtendedRoman ROM 
+*Font Clarendon-Bold: Standard "(001.002)" Standard ROM 
+*Font Clarendon-Light: Standard "(001.002)" Standard ROM 
+*Font Clarendon: Standard "(001.002)" Standard ROM 
+*Font CooperBlack-Italic: Standard "(001.004)" Standard ROM 
+*Font CooperBlack: Standard "(001.004)" Standard ROM 
+*Font Copperplate-ThirtyThreeBC: Standard "(001.003)" Standard ROM 
+*Font Copperplate-ThirtyTwoBC: Standard "(001.003)" Standard ROM 
+*Font Coronet-Regular: Standard "(001.002)" Standard ROM 
+*Font Courier-Bold: Standard "(004.000)" Standard ROM 
+*Font Courier-BoldOblique: Standard "(004.000)" Standard ROM 
+*Font Courier-Oblique: Standard "(004.000)" Standard ROM 
+*Font Courier: Standard "(004.000)" Standard ROM 
+*Font Eurostile-Bold: Standard "(001.002)" Standard ROM 
+*Font Eurostile-BoldExtendedTwo: Standard "(001.003)" Standard ROM 
+*Font Eurostile-ExtendedTwo: Standard "(001.003)" Standard ROM 
+*Font Eurostile: Standard "(001.003)" Standard ROM 
+*Font Geneva: Standard "(001.000)" ExtendedRoman ROM 
+*Font GillSans-Bold: Standard "(001.002)" Standard ROM 
+*Font GillSans-BoldCondensed: Standard "(001.002)" Standard ROM 
+*Font GillSans-BoldItalic: Standard "(001.003)" Standard ROM 
+*Font GillSans-Condensed: Standard "(001.002)" Standard ROM 
+*Font GillSans-ExtraBold: Standard "(001.002)" Standard ROM 
+*Font GillSans-Italic: Standard "(001.003)" Standard ROM 
+*Font GillSans-Light: Standard "(001.002)" Standard ROM 
+*Font GillSans-LightItalic: Standard "(001.003)" Standard ROM 
+*Font GillSans: Standard "(001.003)" Standard ROM 
+*Font Goudy-Bold: Standard "(001.003)" Standard ROM 
+*Font Goudy-BoldItalic: Standard "(001.003)" Standard ROM 
+*Font Goudy-ExtraBold: Standard "(001.002)" Standard ROM 
+*Font Goudy-Italic: Standard "(001.003)" Standard ROM 
+*Font Goudy: Standard "(001.004)" Standard ROM 
+*Font Helvetica-Bold: Standard "(003.000)" Standard ROM 
+*Font Helvetica-BoldOblique: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Condensed-Bold: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Condensed-BoldObl: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Condensed-Oblique: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Condensed: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Narrow-Bold: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Narrow-BoldOblique: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Narrow-Oblique: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Narrow: Standard "(003.000)" Standard ROM 
+*Font Helvetica-Oblique: Standard "(003.000)" Standard ROM 
+*Font Helvetica: Standard "(003.000)" Standard ROM 
+*Font HoeflerText-Black: Standard "(001.000)" ExtendedRoman ROM 
+*Font HoeflerText-BlackItalic: Standard "(001.000)" ExtendedRoman ROM 
+*Font HoeflerText-Italic: Standard "(001.000)" ExtendedRoman ROM 
+*Font HoeflerText-Ornaments: Special "(001.001)" Special ROM 
+*Font HoeflerText-Regular: Standard "(001.000)" ExtendedRoman ROM 
+*Font JoannaMT-Bold: Standard "(001.001)" Standard ROM 
+*Font JoannaMT-BoldItalic: Standard "(001.001)" Standard ROM 
+*Font JoannaMT-Italic: Standard "(001.001)" Standard ROM 
+*Font JoannaMT: Standard "(001.001)" Standard ROM 
+*Font LetterGothic-Bold: Standard "(001.007)" Standard ROM 
+*Font LetterGothic-BoldSlanted: Standard "(001.006)" Standard ROM 
+*Font LetterGothic-Slanted: Standard "(001.005)" Standard ROM 
+*Font LetterGothic: Standard "(001.005)" Standard ROM 
+*Font LubalinGraph-Book: Standard "(001.004)" Standard ROM 
+*Font LubalinGraph-BookOblique: Standard "(001.004)" Standard ROM 
+*Font LubalinGraph-Demi: Standard "(001.004)" Standard ROM 
+*Font LubalinGraph-DemiOblique: Standard "(001.004)" Standard ROM 
+*Font Marigold: Standard "(001.001)" Standard ROM 
+*Font MonaLisa-Recut: Standard "(001.001)" Standard ROM 
+*Font Monaco: Standard "(001.001)" ExtendedRoman ROM 
+*Font NewCenturySchlbk-Bold: Standard "(003.000)" Standard ROM 
+*Font NewCenturySchlbk-BoldItalic: Standard "(003.000)" Standard ROM 
+*Font NewCenturySchlbk-Italic: Standard "(003.000)" Standard ROM 
+*Font NewCenturySchlbk-Roman: Standard "(003.000)" Standard ROM 
+*Font NewYork: Standard "(001.000)" ExtendedRoman ROM 
+*Font OCRBLetM: Standard "(1.05)" Standard ROM 
+*Font Optima-Bold: Standard "(001.007)" Standard ROM 
+*Font Optima-BoldItalic: Standard "(001.001)" Standard ROM 
+*Font Optima-Italic: Standard "(001.001)" Standard ROM 
+*Font Optima: Standard "(001.006)" Standard ROM 
+*Font Oxford: Standard "(001.001)" Standard ROM 
+*Font Palatino-Bold: Standard "(003.000)" Standard ROM 
+*Font Palatino-BoldItalic: Standard "(003.000)" Standard ROM 
+*Font Palatino-Italic: Standard "(003.000)" Standard ROM 
+*Font Palatino-Roman: Standard "(003.000)" Standard ROM 
+*Font StempelGaramond-Bold: Standard "(001.003)" Standard ROM 
+*Font StempelGaramond-BoldItalic: Standard "(001.003)" Standard ROM 
+*Font StempelGaramond-Italic: Standard "(001.003)" Standard ROM 
+*Font StempelGaramond-Roman: Standard "(001.003)" Standard ROM 
+*Font Symbol: Special "(001.008)" Special ROM 
+*Font Tekton: Standard "(001.002)" Standard ROM 
+*Font Times-Bold: Standard "(003.000)" Standard ROM 
+*Font Times-BoldItalic: Standard "(003.000)" Standard ROM 
+*Font Times-Italic: Standard "(003.000)" Standard ROM 
+*Font Times-Roman: Standard "(003.000)" Standard ROM 
+*Font TimesNewRomanPS-BoldItalicMT: Standard "(001.003)" Standard ROM 
+*Font TimesNewRomanPS-BoldMT: Standard "(001.004)" Standard ROM 
+*Font TimesNewRomanPS-ItalicMT: Standard "(001.003)" Standard ROM 
+*Font TimesNewRomanPSMT: Standard "(001.003)" Standard ROM 
+*Font Univers-Bold: Standard "(001.004)" Standard ROM 
+*Font Univers-BoldExt: Standard "(001.001)" Standard ROM 
+*Font Univers-BoldExtObl: Standard "(001.001)" Standard ROM 
+*Font Univers-BoldOblique: Standard "(001.004)" Standard ROM 
+*Font Univers-Condensed: Standard "(001.003)" Standard ROM 
+*Font Univers-CondensedBold: Standard "(001.002)" Standard ROM 
+*Font Univers-CondensedBoldOblique: Standard "(001.002)" Standard ROM 
+*Font Univers-CondensedOblique: Standard "(001.003)" Standard ROM 
+*Font Univers-Extended: Standard "(001.001)" Standard ROM 
+*Font Univers-ExtendedObl: Standard "(001.001)" Standard ROM 
+*Font Univers-Light: Standard "(001.004)" Standard ROM 
+*Font Univers-LightOblique: Standard "(001.004)" Standard ROM 
+*Font Univers-Oblique: Standard "(001.004)" Standard ROM 
+*Font Univers: Standard "(001.004)" Standard ROM 
+*Font Wingdings-Regular: Special "(001.001)" Special ROM 
+*Font ZapfChancery-MediumItalic: Standard "(003.000)" Standard ROM 
+*Font ZapfDingbats: Special "(002.000)" Special ROM 
+
+*?FontQuery: "
+ save
+   { count 1 gt
+      { exch dup 127 string cvs (/)
+        print print (:) print
+        /Font resourcestatus {pop pop (Yes)} {(No)} ifelse =
+      } { exit } ifelse
+   } bind loop
+   (*) = flush
+ restore
+"
+*End
+
+*?FontList: "
+save
+  (*) {cvn ==} 128 string /Font resourceforall
+  (*) = flush
+restore
+"
+*End
+
+
+*% Printer Messages (verbatim from printer):
+*Message: "%%[ exitserver: permanent state may be changed ]%%"
+*Message: "%%[ Flushing: rest of job (to end-of-file) will be ignored ]%%"
+*Message: "\FontName\ not found, using Courier"
+
+*% Status (format: %%[ status: <one of these> ] %%)
+*Status: "busy"
+*Status: "idle"
+*Status: "initializing"
+*Status: "PrinterError"
+*Status: "PrinterError: belt error"
+*Status: "PrinterError: belt life over"
+*Status: "PrinterError: belt out"
+*Status: "PrinterError: cover open"
+*Status: "PrinterError: disk full"
+*Status: "PrinterError: download error"
+*Status: "PrinterError: error"
+*Status: "PrinterError: fuser error"
+*Status: "PrinterError: fuser life over"
+*Status: "PrinterError: fuser out"
+*Status: "PrinterError: memory full"
+*Status: "PrinterError: no paper"
+*Status: "PrinterError: no paper tray"
+*Status: "PrinterError: NVRAM malfunction"
+*Status: "PrinterError: paper jam"
+*Status: "PrinterError: paper size mismatch"
+*Status: "PrinterError: service call"
+*Status: "PrinterError: toner error"
+*Status: "PrinterError: toner life over"
+*Status: "PrinterError: toner out"
+*Status: "PrinterError: toner over"
+
+*% Input Sources (format: %%[ status: <stat>; source: <one of these> ]%% )
+*Source: "USB"
+*Source: "LPR"
+*% Printer Error (format: %%[ PrinterError: <one of these> ]%%)
+*PrinterError: "belt error"
+*PrinterError: "belt life over"
+*PrinterError: "belt out"
+*PrinterError: "cover open"
+*PrinterError: "disk full"
+*PrinterError: "download error"
+*PrinterError: "error"
+*PrinterError: "fuser error"
+*PrinterError: "fuser life over"
+*PrinterError: "fuser out"
+*PrinterError: "memory full"
+*PrinterError: "no paper"
+*PrinterError: "no paper tray"
+*PrinterError: "NVRAM malfunction"
+*PrinterError: "paper jam"
+*PrinterError: "paper size mismatch"
+*PrinterError: "service call"
+*PrinterError: "toner error"
+*PrinterError: "toner life over"
+*PrinterError: "toner out"
+*PrinterError: "toner over"
+
+*% Color Separation Information =====================
+*%*DefaultGuaranteedMaxSeparations: 1
+*%*GuaranteedMaxSeparations 4: ""
+*%*GuaranteedMaxSeparations 3: ""
+*%*GuaranteedMaxSeparations 2: ""
+*%*GuaranteedMaxSeparations 1: ""
+*%*?GuaranteedMaxSeparations: "currentpagedevice /MaxSeparations get ="
+
+*% end of PPD file
+
