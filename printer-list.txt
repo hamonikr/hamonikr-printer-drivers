@@ -2859,6 +2859,28 @@ usr/share/ppd/
 │   ├── Infotec-Pro_C7210S_PXL.ppd
 │   └── Infotec-Pro_C7210_PXL.ppd
 ├── konica_minolta
+│   ├── KMbeu423ux.ppd
+│   ├── KMbeu4750ux.ppd
+│   ├── KMbeu4752ux.ppd
+│   ├── KMbeu5020iUX.ppd
+│   ├── KMbeu554eux.ppd
+│   ├── KMbeu652ux.ppd
+│   ├── KMbeu754ux.ppd
+│   ├── KMbeu958ux.ppd
+│   ├── KMbeuC35ux.ppd
+│   ├── KMbeuC360iux.ppd
+│   ├── KMbeuC360ux.ppd
+│   ├── KMbeuC364ux.ppd
+│   ├── KMbeuC368ux.ppd
+│   ├── KMbeuC3850ux.ppd
+│   ├── KMbeuC3851ux.ppd
+│   ├── KMbeuC554ux.ppd
+│   ├── KMbeuC650iux.ppd
+│   ├── KMbeuC652ux.ppd
+│   ├── KMbeuC658ux.ppd
+│   ├── KMbeuC754ux.ppd
+│   ├── KMbeuC759ux.ppd
+│   ├── KMbeuWPHux.ppd
 │   ├── KO1050UX.ppd
 │   ├── KO500UX.ppd
 │   ├── KO750UX.ppd
@@ -5039,8 +5061,7 @@ usr/share/ppd/
 │   ├── Samsung_X401_Series.ppd
 │   ├── Samsung_X4300_Series.ppd
 │   ├── Samsung_X703_Series.ppd
-│   ├── Samsung_X7600_Series.ppd
-│   └── docuprint-cm225-fw.ppd
+│   └── Samsung_X7600_Series.ppd
 ├── savin-ps
 │   ├── Savin-2404WDP_PS.ppd
 │   ├── Savin-2404WD_PS.ppd
@@ -5761,6 +5782,9 @@ usr/share/ppd/
 │   ├── shc262sj.ppd
 │   ├── shmb201d.ppd
 │   └── shmxb201.ppd
+├── sindoh
+│   ├── KOD710KX.ppd
+│   └── KOD710opn.ppd
 ├── toshiba
 │   ├── TOSHIBA_EST205_CUPS.ppd
 │   ├── TOSHIBA_EST280_282_CUPS.ppd
@@ -5771,6 +5795,7 @@ usr/share/ppd/
 │   ├── Toshiba_GL1010_CUPS.ppd
 │   └── Toshiba_GL1020_CUPS.ppd
 └── xerox
+    ├── docuprint-cm225-fw.ppd
     ├── xrx1235.ppd
     ├── xrx128.ppd
     ├── xrx133.ppd
@@ -5885,4 +5910,4 @@ usr/share/ppd/
     ├── xrxwcm24.ppd
     └── xxrm118.ppd
 
-28 directories, 5857 files
+29 directories, 5881 files

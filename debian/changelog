@@ -1,3 +1,18 @@
+hamonikr-printer-drivers (1.1.0) stable; urgency=medium
+
+  * Add Sindoh linux printer
+   - https://www.sindoh.com/downcenter/dc_comSearch.do#n
+   - Sindoh D410
+   - Sindoh D411
+   - Sindoh D420
+   - Sindoh N501         
+
+  * Add KONICA MINOLTA linux printer
+   - https://www.cs.stonybrook.edu/about-us/csintranet/faqs/KonicaLinux
+   - KONICA MINOLTA bizhub C224e
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 16 Nov 2020 18:07:14 +0900
+
 hamonikr-printer-drivers (1.0.1) jin; urgency=medium
 
   * Add DocuPrint-CM225 printer

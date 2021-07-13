@@ -35,6 +35,7 @@
     * samsung
     * savin-ps
     * savin-pxl
+    * sindoh
     * sharp
     * toshiba
     * xerox

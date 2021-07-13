@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -f "/etc/cups/cups-browsed.conf.bak" ]] ; then
+	echo "Restore cups-browsed.conf"
+	mv /etc/cups/cups-browsed.conf.bak /etc/cups/cups-browsed.conf
+    
+	systemctl restart cups cups-browsed || true
+fi
