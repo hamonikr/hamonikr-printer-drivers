@@ -7,7 +7,7 @@
 * Ubuntu (>=18.04), LinuxMint (>=19), any Ubuntu based Linux
 ```
 # Add APT
-curl -sL https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash-
+wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
 
 sudo apt update
 sudo apt install hamonikr-printer-drivers
