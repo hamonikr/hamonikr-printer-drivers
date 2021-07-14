@@ -1,4 +1,4 @@
-hamonikr-printer-drivers (1.1.) stable; urgency=medium
+hamonikr-printer-drivers (1.1.1) stable; urgency=medium
 
   * Add driver for CANON MG2500
    - Add usr/share/ppd/canon/canonmg2500.ppd
