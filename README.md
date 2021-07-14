@@ -3,14 +3,25 @@
 
  자주 문의하는 프린터 드라이버를 미리 다운로드 받아서 제공하는 프린터 드라이버 모음입니다.
 
+## Install
+* Ubuntu (>=18.04), LinuxMint (>=19), any Ubuntu based Linux
+```
+# Add APT
+wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
+
+sudo apt update
+sudo apt install hamonikr-printer-drivers
+```
+
 ## 지원 프린터
 
  지원 프린터 목록은 아래에서 확인하실 수 있습니다.
  - [제공되는 드라이버 파일 목록](./printer-list.txt)
 
-## 하모니카에서 프린터 설치하는 방법
+## 하모니카 프린터 설치 가이드
 프린터를 추가하는 방법은 아래 링크한 문서를 참고하세요.
   - [프린터 설치 가이드](https://docs.hamonikr.org/hamonikr/tips/printers)
+
 
 ### 지원하는 프린터 제조사
 
