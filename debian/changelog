@@ -1,3 +1,13 @@
+hamonikr-printer-drivers (1.1.1) stable; urgency=medium
+
+  * Add driver for CANON MG2500
+   - https://hamonikr.org/Free_Board/100793
+   - https://asia.canon/en/support/0100550201
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 16 Nov 2020 18:07:14 +0900
+
+usr/share/ppd/canon/canonmg2500.ppd
+
 hamonikr-printer-drivers (1.1.0) stable; urgency=medium
 
   * Add Sindoh linux printer
