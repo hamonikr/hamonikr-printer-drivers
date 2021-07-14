@@ -73,6 +73,7 @@ usr/share/ppd/
 │   ├── brother_hll8350cdw_printer_en.ppd
 │   └── brother_hll8360cdw_printer_en.ppd
 ├── canon
+│   ├── canonmg2500.ppd
 │   ├── cnadv400x1g.ppd
 │   ├── cnadv4025x1g.ppd
 │   ├── cnadv4045x1g.ppd
@@ -2898,7 +2899,17 @@ usr/share/ppd/
 │   ├── KOC451SX.ppd
 │   ├── KOC451TCX.ppd
 │   ├── KOC451UX.ppd
-│   └── KOC550UX.ppd
+│   ├── KOC550UX.ppd
+│   ├── KONICA_MINOLTA-1050_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-500_420_360_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-750_600_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C250_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C252_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C351_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C352_C300_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C450_PS_P-Postscript.ppd
+│   ├── KONICA_MINOLTA-C451_PS_P-Postscript.ppd
+│   └── KONICA_MINOLTA-C550_PS_P-Postscript.ppd
 ├── kyocera
 │   ├── Kyocera_CS-C2525E_en.ppd
 │   ├── Kyocera_CS-C3225E_en.ppd
@@ -5910,4 +5921,4 @@ usr/share/ppd/
     ├── xrxwcm24.ppd
     └── xxrm118.ppd
 
-29 directories, 5881 files
+29 directories, 5892 files
