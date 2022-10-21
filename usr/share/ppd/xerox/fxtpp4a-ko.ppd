@@ -4,7 +4,7 @@
 *%-------------------------------------------------------------------------
 *FileVersion: "1.4"
 *FormatVersion: "4.3"
-*LanguageEncoding: ISOLatin2
+*LanguageEncoding: UTF-8
 *LanguageVersion: Korean
 *Manufacturer: "Fuji Xerox"
 *PCFileName: "fxtpp4a.PPD"
@@ -193,7 +193,7 @@ restore
 *%End
 *%Duplex DuplexNoTumble/Flip on Long edge: "
 *%    userdict /$$OEMPreConfigDict known {
- *%       userdict /$$OEMPreConfigDict get /Duplex 2 copy known {
+*%       userdict /$$OEMPreConfigDict get /Duplex 2 copy known {
 *%            get exec false
 *%        }{
 *%            pop pop true
