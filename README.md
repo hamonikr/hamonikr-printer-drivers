@@ -4,7 +4,7 @@
  자주 문의하는 프린터 드라이버를 미리 다운로드 받아서 제공하는 프린터 드라이버 모음입니다.
 
 ## Install
-* Ubuntu (>=18.04), LinuxMint (>=19), any Ubuntu based Linux
+* Ubuntu (>=18.04), LinuxMint (>=19)
 ```
 # Add APT
 wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
