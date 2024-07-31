@@ -1,3 +1,9 @@
+hamonikr-printer-drivers (1.1.5) stable; urgency=medium
+
+  * Release on ubuntu 24.04 noble
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 31 Jul 2024 12:39:47 +0900
+
 hamonikr-printer-drivers (1.1.4) stable; urgency=medium
 
   * Release on ubuntu 22.04
